@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from "../assets/logo.png"
+import logo from "../assets/logo.jpg"
 
 const Footer = () => {
   return (
     <div>
-      <div className="mt-8 bg-gradient-to-r from-teal-600 via-teal-600 to-teal-600 pt-9">
+      <div className="mt-8 bg-gradient-to-r from-gray-900 to-black pt-9">
   <div className="mx-auto w-full max-w-[1166px] px-4 xl:px-0">
     <div className="flex flex-col justify-between sm:px-[18px] md:flex-row md:px-10">
       <div className="md:w-[316px]">
