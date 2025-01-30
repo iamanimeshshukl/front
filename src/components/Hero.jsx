@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom"; // Import useNavigate for redire
 const Hero = () => {
   const navigate = useNavigate(); // Hook for navigation
 
-  // Handle button click to redirect
+  
   const handleButtonClick = () => {
     navigate("/profile"); // Redirect to the profile page
   };
@@ -30,7 +30,7 @@ const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <span className="text-cyan-500">Smart</span>
-          <span className="text-yellow-400">  E-Toilets</span>
+          <span className="text-yellow-500">  E-Toilets</span>
         </motion.h1>
 
         <motion.p 
