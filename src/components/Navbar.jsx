@@ -10,7 +10,7 @@ import {
   RiLogoutBoxRLine 
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-import img from "../assets/logo.jpg";
+import img from "/src/assets/logo1.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +30,7 @@ const Navbar = () => {
 
   return (
     <motion.nav
-      className="sticky top-0 z-50 bg-gradient-to-r from-gray-900 to-black text-white shadow-xl"
+      className="sticky top-0 z-50 bg-gradient-to-r from-pink-400 via-pink-500 to-purple-600 text-white shadow-xl"
       initial={{ opacity: 0, y: -50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
@@ -39,9 +39,6 @@ const Navbar = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <img src={img} alt="Annanta Logo" className="h-14 rounded-full shadow-lg" />
-          <p className="text-2xl font-extrabold tracking-wide text-teal-300">
-            Smart <span className="text-yellow-400"> E Toilet</span>
-          </p>
         </div>
 
         {/* Desktop Menu */}
@@ -79,7 +76,7 @@ const Navbar = () => {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-gradient-to-b from-gray-900 to-teal-700 px-6 py-4"
+          className="md:hidden bg-gradient-to-b from-pink-400 via-pink-500 to-purple-600 px-6 py-4"
         >
           {navLinks.map((link) => (
             <a

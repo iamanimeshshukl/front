@@ -1,61 +1,75 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaCloudUploadAlt, FaToilet, FaBrain, FaChartLine } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 
-const RoadmapSection = () => {
-  const steps = [
-    {
-      icon: <FaToilet className="text-5xl text-blue-500" />, 
-      title: "User Uses Smart E-Toilet", 
-      description: "The user enters the smart toilet, which automatically collects health data from urine analysis.",
-      position: "left"
-    },
-    {
-      icon: <FaCloudUploadAlt className="text-5xl text-teal-500" />, 
-      title: "Data Sent to Cloud", 
-      description: "The collected health data is securely transmitted to the cloud for processing.",
-      position: "right"
-    },
-    {
-      icon: <FaBrain className="text-5xl text-purple-500" />, 
-      title: "AI Analyzes Data", 
-      description: "AI models analyze the data, detecting potential health issues and generating a detailed report.",
-      position: "left"
-    },
-    {
-      icon: <FaChartLine className="text-5xl text-green-500" />, 
-      title: "Report Sent to User", 
-      description: "The processed data and insights are displayed on the user’s dashboard for health monitoring.",
-      position: "right"
-    },
-  ];
+const features = [
+  {
+    title: "Track your cycle and symptoms",
+    description:
+      "Figure out what’s normal for you with our period and cycle tracker. Spot patterns in your symptoms and know when your period is likely to start so you’re always prepared.",
+  },
+  {
+    title: "Understand your fertility better",
+    description:
+      "Get daily conception tips from our experts and learn how to read your body’s fertility signals with our ovulation tracker.",
+  },
+  {
+    title: "Follow your pregnancy week by week",
+    description:
+      "See how your body and baby are changing with our pregnancy tracker. Know when your baby will hit important milestones.",
+  },
+  {
+    title: "Share with your partner",
+    description:
+      "We’ll teach them everything they need to know about your body (and how to better support you).",
+  },
+  {
+    title: "Switch to Anonymous Mode",
+    description:
+      "Understand your body better with an added layer of privacy. Flo is already encrypted as standard, and we will never sell your data.",
+  },
+];
 
+const FloAppSection = () => {
   return (
-    <section className="bg-gray-900 text-white py-16 px-6">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl md:text-5xl font-bold text-teal-300 mb-12">How Smart E-Toilet Works</h2>
-        <div className="relative max-w-5xl mx-auto">
-          <div className="border-l-4 border-teal-400 absolute h-full left-1/2 transform -translate-x-1/2"></div>
-          {steps.map((step, index) => (
-            <motion.div
-              key={index}
-              className={`flex w-full mb-10 relative ${step.position === 'left' ? 'justify-start' : 'justify-end'}`}
-              initial={{ opacity: 0, x: step.position === 'left' ? -100 : 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.3 }}
-            >
-              <div className={`bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg w-full max-w-sm md:max-w-lg text-center ${step.position === 'left' ? 'ml-12' : 'mr-12'}`}>
-                <div className="mb-4 flex justify-center">{step.icon}</div>
-                <h3 className="text-xl md:text-2xl font-semibold mb-2">{step.title}</h3>
-                <p className="text-gray-400 text-sm md:text-base">{step.description}</p>
-              </div>
-            
-            </motion.div>
-          ))}
+    <section className="bg-gray-50 text-gray-900 py-16 px-6">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        {/* Mobile UI Preview */}
+        <div className="flex justify-center">
+          <motion.img
+            src="/flo-app-preview.png" // Placeholder, replace with the actual image URL
+            alt="Adhya App UI"
+            className="rounded-lg shadow-lg w-72"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          />
+        </div>
+
+        {/* Features List */}
+        <div>
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">What can you do with the Adhya app?</h2>
+          <div className="space-y-6">
+            {features.map((feature, index) => (
+              <motion.div
+                key={index}
+                className="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4"
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+              >
+                <FaCheckCircle className="text-pink-500 text-2xl mt-1" />
+                <div>
+                  <h3 className="text-lg font-semibold">{feature.title}</h3>
+                  <p className="text-gray-600">{feature.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default RoadmapSection;
+export default FloAppSection;
