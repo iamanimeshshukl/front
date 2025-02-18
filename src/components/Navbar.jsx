@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { 
-  RiMenu3Line, 
-  RiCloseLine, 
-  RiHomeHeartLine, 
-  RiUserHeartLine, 
-  RiContactsBookLine, 
-  RiInformationLine, 
-  RiLogoutBoxRLine 
+import {
+  RiMenu3Line,
+  RiCloseLine,
+  RiHomeHeartLine,
+  RiUserHeartLine,
+  RiContactsBookLine,
+  RiInformationLine,
+  RiLogoutBoxRLine,
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-import img from "/src/assets/logo1.jpg";
+import img from "/src/assets/smart.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,80 +29,83 @@ const Navbar = () => {
   ];
 
   return (
-    <motion.nav
-      className="sticky top-0 z-50 bg-gradient-to-r from-pink-400 via-pink-500 to-purple-600 text-white shadow-xl"
-      initial={{ opacity: 0, y: -50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
+    <motion.div
+      className="fixed top-4 left-1/2 transform -translate-x-1/2 w-full max-w-[70em] bg-white shadow-lg z-50 px-6 py-2 rounded-full flex items-center justify-between space-x-6"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
     >
-      <div className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <img src={img} alt="Annanta Logo" className="h-14 rounded-full shadow-lg" />
-        </div>
+      {/* Logo */}
+      <div className="flex items-center space-x-2">
+        <img src={img} alt="Annanta Logo" className="h-16 w-16 rounded-full" />
+      </div>
 
-        {/* Desktop Menu */}
-        <div className="hidden md:flex items-center space-x-8 font-semibold text-lg">
+      {/* Navbar Links for Desktop */}
+      <div className="hidden lg:flex items-center space-x-8">
+        {navLinks.map((link) => (
+          <a
+            key={link.href}
+            href={link.href}
+            className="flex items-center text-gray-700 hover:text-teal-500 transition-all duration-300"
+          >
+            {link.icon}
+            {link.label}
+          </a>
+        ))}
+        {/* Logout Button */}
+        <button
+          onClick={handleLogout}
+          className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800"
+        >
+          <RiLogoutBoxRLine className="mr-2" /> Logout
+        </button>
+      </div>
+
+      {/* Hamburger Menu for Mobile */}
+      <div className="lg:hidden">
+        <motion.div
+          className="flex items-center justify-center"
+         
+          transition={{ duration: 0.2 }}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? (
+            <RiCloseLine className="text-gray-800" size={30} />
+          ) : (
+            <RiMenu3Line className="text-gray-800" size={30} />
+          )}
+        </motion.div>
+      </div>
+
+      {/* Mobile Dropdown Menu */}
+      {isOpen && (
+        <motion.div
+          
+          className="absolute top-16 left-1/2 transform -translate-x-1/2 w-full bg-white shadow-lg p-6 rounded-lg flex flex-col items-center space-y-4"
+        >
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="flex items-center text-gray-300 hover:text-teal-300 transition-all duration-300 hover:scale-110"
+              className="flex items-center text-gray-700 hover:text-teal-500 transition-all duration-300"
             >
               {link.icon}
               {link.label}
             </a>
           ))}
           <button
-            onClick={handleLogout}
-            className="flex items-center px-4 py-2 rounded bg-gradient-to-r from-red-600 to-red-800 text-white hover:from-red-700 hover:to-red-900 transition-all duration-300 hover:scale-110 shadow-md"
-          >
-            <RiLogoutBoxRLine className="mr-2" /> Logout
-          </button>
-        </div>
-
-        {/* Mobile Menu Button */}
-        <button
-          className="md:hidden text-3xl focus:outline-none text-gray-300 hover:text-teal-300 transition-all duration-300"
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <RiCloseLine /> : <RiMenu3Line />}
-        </button>
-      </div>
-
-      {/* Mobile Menu */}
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-gradient-to-b from-pink-400 via-pink-500 to-purple-600 px-6 py-4"
-        >
-          {navLinks.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="block py-3 text-gray-300 hover:text-yellow-400 transition-all duration-300 hover:scale-105"
-              onClick={() => setIsOpen(false)}
-            >
-              <span className="flex items-center">
-                {link.icon}
-                {link.label}
-              </span>
-            </a>
-          ))}
-          <button
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               handleLogout();
               setIsOpen(false);
             }}
-            className="block w-full mt-4 py-3 bg-gradient-to-r from-red-600 to-red-800 rounded text-center text-white hover:from-red-700 hover:to-red-900 transition-all duration-300 hover:scale-105 shadow-md"
+            className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800"
           >
-            <RiLogoutBoxRLine className="inline mr-2" /> Logout
+            <RiLogoutBoxRLine className="mr-2" /> Logout
           </button>
         </motion.div>
       )}
-    </motion.nav>
+    </motion.div>
   );
 };
 
