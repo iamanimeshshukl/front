@@ -32,7 +32,7 @@ const features = [
 
 const FloAppSection = () => {
   return (
-    <section className="bg-gray-50 text-gray-900 py-16 px-6">
+    <section className="bg-pink-50 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Mobile UI Preview */}
         <div className="flex justify-center">
@@ -48,7 +48,7 @@ const FloAppSection = () => {
 
         {/* Features List */}
         <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">What can you do with the Adhya app?</h2>
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">What can you do with the Zenher app?</h2>
           <div className="space-y-6">
             {features.map((feature, index) => (
               <motion.div

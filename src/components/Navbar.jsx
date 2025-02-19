@@ -23,9 +23,9 @@ const Navbar = () => {
 
   const navLinks = [
     { href: "/", label: "Home", icon: <RiHomeHeartLine className="mr-2" /> },
+    { href: "/products", label: "Products", icon: <RiUserHeartLine className="mr-2" /> },
+    { href: "/health", label: "Health Library", icon: <RiContactsBookLine className="mr-2" /> },
     { href: "/about", label: "About Us", icon: <RiInformationLine className="mr-2" /> },
-    { href: "/profile", label: "Profile", icon: <RiUserHeartLine className="mr-2" /> },
-    { href: "/contact", label: "Contact", icon: <RiContactsBookLine className="mr-2" /> },
   ];
 
   return (
@@ -55,9 +55,9 @@ const Navbar = () => {
         {/* Logout Button */}
         <button
           onClick={handleLogout}
-          className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800"
+          className="flex items-center bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700"
         >
-          <RiLogoutBoxRLine className="mr-2" /> Logout
+         Try Zenher
         </button>
       </div>
 
@@ -101,7 +101,7 @@ const Navbar = () => {
             }}
             className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800"
           >
-            <RiLogoutBoxRLine className="mr-2" /> Logout
+            <RiLogoutBoxRLine className="mr-2" /> Try Zenher
           </button>
         </motion.div>
       )}

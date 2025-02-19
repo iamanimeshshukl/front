@@ -1,113 +1,65 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { FaStar, FaThumbsUp, FaChartLine, FaRedo } from "react-icons/fa"; // Importing icons
+import { FaHeartbeat, FaShieldAlt, FaLightbulb, FaMobileAlt, FaStar, FaArrowLeft, FaArrowRight, FaUserCircle } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
-const reviews = [
+const features = [
   {
-    name: "Ananya Mehta",
-    review: "The smart e-toilet has transformed my daily routine. It’s efficient and incredibly user-friendly!",
+    icon: <FaHeartbeat className="text-pink-500 text-4xl" />, 
+    title: "Personalized Health Insights",
+    description: "Get AI-driven health tracking tailored to your unique needs."
   },
   {
-    name: "Rajesh Kumar",
-    review: "I love how it saves water without compromising on cleanliness. Truly a great investment!",
+    icon: <FaShieldAlt className="text-blue-500 text-4xl" />, 
+    title: "Privacy & Security",
+    description: "Your data is encrypted and protected with top-tier security measures."
   },
   {
-    name: "Sita Rani",
-    review: "This e-toilet is eco-friendly and has made a significant difference in our household.",
+    icon: <FaLightbulb className="text-yellow-500 text-4xl" />, 
+    title: "Smart AI Recommendations",
+    description: "Receive scientifically backed suggestions for better well-being."
   },
   {
-    name: "Vikram Singh",
-    review: "The hygiene features are top-notch! I feel safer and cleaner using this toilet.",
-  },
-  {
-    name: "Meera Joshi",
-    review: "My family loves it! It’s convenient and makes life so much easier.",
-  },
-  {
-    name: "Aarav Kapoor",
-    review: "The advanced technology in this toilet is impressive. Highly recommend it to everyone!",
-  },
+    icon: <FaMobileAlt className="text-green-500 text-4xl" />, 
+    title: "Seamless Mobile Experience",
+    description: "Access all features smoothly on any device, anywhere."
+  }
 ];
 
-const Marquee = () => {
+
+export default function WhyChooseZenher() {
+  const [currentReview, setCurrentReview] = useState(0);
+
+  const nextReview = () => {
+    setCurrentReview((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setCurrentReview((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
   return (
-    <div className="bg-gray-900 text-white overflow-hidden">
-      <section className="pb-12 mx-auto md:pb-20 max-w-6xl">
-        <div className="py-4 text-center md:py-8">
-          <h4 className="text-base font-bold tracking-wide text-teal-600 uppercase text-center">
-            Customer Reviews
-          </h4>
-          <p className="mt-2 text-xl tracking-tight text-gray-300 md:text-2xl">
-            What our clients are saying
-          </p>
-        </div>
+    <section className="py-16 px-6 md:px-12 lg:px-24 bg-pink-50 text-gray-800">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold mb-4 text-pink-600">Why Choose Zenher?</h2>
+        <p className="text-lg text-gray-600">Empowering women’s health with technology and care.</p>
+      </div>
 
-        {/* Marquee Container */}
-        <motion.div
-          className="flex space-x-6"
-          animate={{ x: ["100%", "-100%"] }}
-          transition={{ duration: 30, ease: [0.3, 0, 0.7, 1], repeat: Infinity }} // Slower movement
-        >
-          {/* Repeat the reviews to create a seamless effect */}
-          {[...reviews, ...reviews].map((review, index) => (
-            <motion.div
-              key={index}
-              className="flex-shrink-0 w-64 p-6 bg-gray-800 border border-gray-700 shadow-lg rounded-lg"
-            >
-              <FaStar className="text-teal-500 mb-2" size={30} />
-              <h6 className="text-lg font-medium">{review.name}</h6>
-              <p className="mt-2">{review.review}</p>
-            </motion.div>
-          ))}
-        </motion.div>
-      </section>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {features.map((feature, index) => (
+          <motion.div
+            key={index}
+            className="p-6 bg-white shadow-lg rounded-2xl text-center flex flex-col items-center border border-gray-200 hover:shadow-xl transition"
+            whileHover={{ scale: 1.05 }}
+          >
+            {feature.icon}
+            <h3 className="text-xl font-semibold mt-4">{feature.title}</h3>
+            <p className="text-gray-500 mt-2">{feature.description}</p>
+          </motion.div>
+        ))}
+      </div>
 
-      {/* Statistics Section */}
-      <section id="stats" className="py-16 lg:py-24">
-        <div className="container mx-auto text-center">
-          <p className="uppercase tracking-wider text-gray-600">Our customers get results</p>
-
-          <div className="flex flex-col sm:flex-row mt-8 lg:px-24">
-            {/* Stat Block 1 */}
-            <motion.div
-              className="flex flex-col items-center w-full sm:w-1/3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 300, delay: 0.2 }}
-            >
-              <FaThumbsUp className="text-teal-500 mb-2" size={40} />
-              <p className="text-4xl lg:text-6xl font-semibold text-teal-500">+90%</p>
-              <p className="font-semibold mb-6">Customer Satisfaction</p>
-            </motion.div>
-
-            {/* Stat Block 2 */}
-            <motion.div
-              className="flex flex-col items-center w-full sm:w-1/3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 300, delay: 0.4 }}
-            >
-              <FaChartLine className="text-teal-500 mb-2" size={40} />
-              <p className="text-4xl lg:text-6xl font-semibold text-teal-500">+75%</p>
-              <p className="font-semibold mb-6">Product Efficiency</p>
-            </motion.div>
-
-            {/* Stat Block 3 */}
-            <motion.div
-              className="flex flex-col items-center w-full sm:w-1/3"
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ type: 'spring', stiffness: 300, delay: 0.6 }}
-            >
-              <FaRedo className="text-teal-500 mb-2" size={40} />
-              <p className="text-4xl lg:text-6xl font-semibold text-teal-500">+80%</p>
-              <p className="font-semibold mb-6">Repeat user</p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-    </div>
+      {/* Review Section */}
+  
+    </section>
   );
-};
-
-export default Marquee;
+}
