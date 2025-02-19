@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaApple, FaGooglePlay } from "react-icons/fa";
-
+import img from "../assets/smart.png";
 export default function HeroSection() {
   return (
     <section className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-24 py-16 bg-pink-50 h-[45em]">
@@ -35,7 +35,7 @@ export default function HeroSection() {
         className="mt-10 lg:mt-0"
       >
         <img
-          src="/hero-image.png"
+          src={img}
           alt="App preview"
           className="w-full max-w-md lg:max-w-lg"
         />

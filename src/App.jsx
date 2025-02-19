@@ -4,8 +4,8 @@ import { HelmetProvider } from 'react-helmet-async';
 
 import Home from './Pages/Home';
 import About from './Pages/Aboutus';
-import Profile from './Pages/Profile';
-import Contact from './Pages/Contact';
+import Products from './Pages/Products';
+import Health from './Pages/Health';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 //import Whatsapp from './components/Whatsapp';
@@ -16,7 +16,7 @@ import SignUp from './Pages/SignUp';
 const App = () => {
   return (
     <HelmetProvider>
-    <div className='bg-gray-900'>
+    <div className='bg-pink-50'>
     <Router>
         <Navbar />
         <Routes>
@@ -24,8 +24,8 @@ const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/about" element={<About />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/health" element={<Health />} />
           <Route path="/product/:id" element={<Productdetail />} />
         </Routes>
         <Footer />
