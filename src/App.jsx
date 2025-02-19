@@ -10,8 +10,6 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 //import Whatsapp from './components/Whatsapp';
 import Productdetail from './components/Productdetails';
-import Signin from './Pages/SignIn';
-import SignUp from './Pages/SignUp';
 
 const App = () => {
   return (
@@ -20,9 +18,9 @@ const App = () => {
     <Router>
         <Navbar />
         <Routes>
-          <Route path="/signin" element={<Signin />} />
+          
           <Route path="/" element={<Home />} />
-          <Route path="/signup" element={<SignUp />} />
+          
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/health" element={<Health />} />
