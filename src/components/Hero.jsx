@@ -50,7 +50,7 @@ export default function HeroSection() {
           whileTap={{ scale: 0.95 }}
           className="mt-6 px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-medium transition-all hover:bg-pink-700 focus:outline-none flex items-center justify-center gap-2"
         >
-          <FaClipboardList size={20} /> Join the Survey
+          <FaClipboardList size={20} /> <a href="https://docs.google.com/forms/d/e/1FAIpQLSecByJsq-fsmP6rqFeAD9wO98Z1gPpcEXZGCf5Lf2IO_gxpnQ/viewform">Join the Survey</a>
         </motion.button>
       </motion.div>
 
