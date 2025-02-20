@@ -1,31 +1,35 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
+import MenstrualCycleImg from "../assets/Menstrual-Cycle.png";
+import FertilityImg from "../assets/Fertility.jpg";
+import PregnantWomanImg from "../assets/Pregnant-woman.jpg";
+import PartnerImg from "../assets/partner.avif";
 
 const features = [
   {
     title: "Track your cycle and symptoms",
     description:
       "Figure out what’s normal for you with our period and cycle tracker. Spot patterns in your symptoms and know when your period is likely to start so you’re always prepared.",
-    imgSrc: "src/assets/Menstrual-Cycle.png",
+    imgSrc: MenstrualCycleImg,
   },
   {
     title: "Understand your fertility better",
     description:
       "Get daily conception tips from our experts and learn how to read your body’s fertility signals with our ovulation tracker.",
-    imgSrc: "src/assets/Fertility.jpg",
+    imgSrc: FertilityImg,
   },
   {
     title: "Follow your pregnancy week by week",
     description:
       "See how your body and baby are changing with our pregnancy tracker. Know when your baby will hit important milestones.",
-    imgSrc: "src/assets/Pregnant-woman.jpg",
+    imgSrc: PregnantWomanImg,
   },
   {
     title: "Share with your partner",
     description:
       "We’ll teach them everything they need to know about your body (and how to better support you).",
-    imgSrc: "src/assets/partner.avif",
+    imgSrc: PartnerImg,
   },
 ];
 
