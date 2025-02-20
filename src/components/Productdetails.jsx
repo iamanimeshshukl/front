@@ -7,66 +7,107 @@ const features = [
     title: "Track your cycle and symptoms",
     description:
       "Figure out what’s normal for you with our period and cycle tracker. Spot patterns in your symptoms and know when your period is likely to start so you’re always prepared.",
+    imgSrc: "src/assets/Menstrual-Cycle.png",
   },
   {
     title: "Understand your fertility better",
     description:
       "Get daily conception tips from our experts and learn how to read your body’s fertility signals with our ovulation tracker.",
+    imgSrc: "src/assets/Fertility.jpg",
   },
   {
     title: "Follow your pregnancy week by week",
     description:
       "See how your body and baby are changing with our pregnancy tracker. Know when your baby will hit important milestones.",
+    imgSrc: "src/assets/Pregnant-woman.jpg",
   },
   {
     title: "Share with your partner",
     description:
       "We’ll teach them everything they need to know about your body (and how to better support you).",
+    imgSrc: "src/assets/partner.avif",
   },
-  {
-    title: "Switch to Anonymous Mode",
-    description:
-      "Understand your body better with an added layer of privacy. Flo is already encrypted as standard, and we will never sell your data.",
-  },
+  
 ];
 
 const FloAppSection = () => {
   return (
     <section className="bg-pink-50 text-gray-900 py-16 px-6">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-        {/* Mobile UI Preview */}
-        <div className="flex justify-center">
-          <motion.img
-            src="/flo-app-preview.png" // Placeholder, replace with the actual image URL
-            alt="Adhya App UI"
-            className="rounded-lg shadow-lg w-72"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          />
-        </div>
+      <div className="max-w-6xl mx-auto text-center mb-12">
+        <motion.h2 
+          className="text-4xl font-extrabold text-gray-800 tracking-wide"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <span className="text-pink-500">What can you do</span> with the Zenher app?
+        </motion.h2>
+      </div>
+      <div className="max-w-6xl mx-auto space-y-12">
+        {features.map((feature, index) => (
+          <motion.div
+            key={index}
+            className={`flex flex-col md:flex-row items-center gap-8 ${
+              index % 2 === 0 ? "md:flex-row-reverse" : ""
+            }`}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            {/* Image Section */}
+            <motion.img
+              src={feature.imgSrc}
+              alt={feature.title}
+              className="rounded-lg shadow-lg w-72 md:w-96"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              whileHover={{ rotate: 2 }}
+            />
 
-        {/* Features List */}
-        <div>
-          <h2 className="text-4xl font-bold text-gray-800 mb-6">What can you do with the Zenher app?</h2>
-          <div className="space-y-6">
-            {features.map((feature, index) => (
+            {/* Text Section */}
+            <motion.div
+              className="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 w-full md:w-1/2"
+              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
+            >
               <motion.div
-                key={index}
-                className="bg-white p-4 rounded-lg shadow-md flex items-start space-x-4"
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                transition={{ duration: 0.5 }}
               >
                 <FaCheckCircle className="text-pink-500 text-2xl mt-1" />
-                <div>
-                  <h3 className="text-lg font-semibold">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
-                </div>
               </motion.div>
-            ))}
-          </div>
-        </div>
+              <div>
+                <motion.h3 
+                  className="text-lg font-semibold"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.3 }}
+                  viewport={{ once: true }}
+                >
+                  {feature.title}
+                </motion.h3>
+                <motion.p 
+                  className="text-gray-600"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6, delay: index * 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  {feature.description}
+                </motion.p>
+              </div>
+            </motion.div>
+          </motion.div>
+        ))}
       </div>
     </section>
   );
