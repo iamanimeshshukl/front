@@ -32,7 +32,7 @@ const features = [
 
 const FloAppSection = () => {
   return (
-    <section className="bg-pink-50 text-gray-900 py-16 px-6">
+    <section className="bg-gradient-to-r from-pink-100 to-purple-200 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Mobile UI Preview */}
         <div className="flex justify-center">
