@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
-import MenstrualCycleImg from "../assets/Menstrual-Cycle.png";
+import MenstrualCycleImg from "../assets/Menstrual-Cycle.jpg";
 import FertilityImg from "../assets/Fertility.jpg";
 import PregnantWomanImg from "../assets/Pregnant-woman.jpg";
 import PartnerImg from "../assets/partner.avif";
@@ -35,7 +35,7 @@ const features = [
 
 const FloAppSection = () => {
   return (
-    <section className="bg-pink-50 text-gray-900 py-16 px-6">
+    <section className="bg-gradient-to-r from-pink-100 to-purple-200 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <motion.h2 
           className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight"

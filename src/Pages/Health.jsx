@@ -36,7 +36,7 @@ export default function ZenherArticles() {
   ];
 
   return (
-    <section className="py-16 px-6 md:px-12 lg:px-24 bg-white text-gray-800">
+    <section className="py-16 px-6 md:px-12 lg:px-24 bg-gradient-to-r from-pink-100 to-purple-200 text-gray-800">
       <div className="text-center mb-12 p-12">
         <h2 className="text-4xl font-bold text-pink-600 mb-4">Know your Body</h2>
         <p className="text-lg text-gray-600">Empowering women with knowledge, backed by experts and AI-driven insights.</p>

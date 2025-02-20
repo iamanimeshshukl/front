@@ -8,7 +8,7 @@ import Review from "../components/Review.jsx"
 //import { Helmet } from 'react-helmet-async';
 const Home = () => {
   return (
-    <div className='bg-gradient-to-r from-pink-100 to-purple-200'>
+    <div className=''>
       
       <Hero />
       
