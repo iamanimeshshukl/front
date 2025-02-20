@@ -11,6 +11,7 @@ import {
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 import img from "/src/assets/smart.png";
+import { FaTools } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,6 +26,7 @@ const Navbar = () => {
     { href: "/", label: "Home", icon: <RiHomeHeartLine className="mr-2" /> },
     { href: "/products", label: "Products", icon: <RiUserHeartLine className="mr-2" /> },
     { href: "/health", label: "Health Library", icon: <RiContactsBookLine className="mr-2" /> },
+    { href: "/tools", label: "Tools", icon: <FaTools className="mr-2" /> },
     { href: "/about", label: "About Us", icon: <RiInformationLine className="mr-2" /> },
   ];
 

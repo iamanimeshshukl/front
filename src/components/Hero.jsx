@@ -4,7 +4,7 @@ import img from "/src/assets/smart.png"
 // import img from "../assets/smart.png";
 export default function HeroSection() {
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-24 py-16 bg-pink-50 h-[45em]">
+    <section className="flex flex-col lg:flex-row items-center justify-between px-8 lg:px-24 py-16 bg-gradient-to-r from-pink-100 to-purple-200 h-[45em]">
       {/* Left Content */}
       <div className="max-w-2xl text-center lg:text-left">
         <p className="text-sm font-semibold text-gray-600 flex items-center justify-center lg:justify-start">

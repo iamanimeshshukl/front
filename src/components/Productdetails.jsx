@@ -27,7 +27,6 @@ const features = [
       "We’ll teach them everything they need to know about your body (and how to better support you).",
     imgSrc: "src/assets/partner.avif",
   },
-  
 ];
 
 const FloAppSection = () => {
@@ -35,12 +34,12 @@ const FloAppSection = () => {
     <section className="bg-pink-50 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <motion.h2 
-          className="text-4xl font-extrabold text-gray-800 tracking-wide"
+          className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <span className="text-pink-500">What can you do</span> with the Zenher app?
+          <span className="text-pink-500">Discover the Power of</span> <span className="text-purple-600">Zenher!</span>
         </motion.h2>
       </div>
       <div className="max-w-6xl mx-auto space-y-12">

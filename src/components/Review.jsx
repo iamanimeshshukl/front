@@ -38,7 +38,7 @@ export default function WhyChooseZenher() {
   };
 
   return (
-    <section className="py-16 px-6 md:px-12 lg:px-24 bg-pink-50 text-gray-800">
+    <section className="py-16 px-6 md:px-12 lg:px-24 bg-gradient-to-r from-pink-100 to-purple-200 text-gray-800">
       <div className="text-center mb-12">
         <h2 className="text-4xl font-bold mb-4 text-pink-600">Why Choose Zenher?</h2>
         <p className="text-lg text-gray-600">Empowering women’s health with technology and care.</p>
