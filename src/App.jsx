@@ -5,16 +5,16 @@ import Home from './Pages/Home';
 import About from './Pages/Aboutus';
 import Products from './Pages/Products';
 import Health from './Pages/Health';
-import Navbar from "./components/Navbar";
+import Navbardumy from "./components/Navbardumy";
 import Footer from "./components/Footer";
 import Productdetail from './components/Productdetails';
 import Tools from "./Pages/Tools"
 const App = () => {
   return (
     <HelmetProvider>
-    <div className='pt-12 bg-gradient-to-r from-pink-100 to-purple-200'>
+    <div className='pt-5 bg-gradient-to-r from-pink-100 to-purple-200'>
     <Router>
-        <Navbar />
+        <Navbardumy />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
