@@ -57,7 +57,7 @@ const Navbar = () => {
         {/* Logout Button */}
         <button
           onClick={handleLogout}
-          className="flex items-center bg-blue-600 px-4 py-2 rounded-full text-white hover:bg-blue-700"
+          className="flex items-center bg-pink-500 px-4 py-2 rounded-full text-white hover:bg-pink-600"
         >
          Try Zenher
         </button>
