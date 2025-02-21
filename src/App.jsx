@@ -12,7 +12,7 @@ import Tools from "./Pages/Tools"
 const App = () => {
   return (
     <HelmetProvider>
-    <div className='pt-5 bg-gradient-to-r from-pink-100 to-purple-200'>
+    <div className='pt-8  bg-gradient-to-r from-pink-100 to-purple-200'>
     <Router>
         <Navbardumy />
         <Routes>
