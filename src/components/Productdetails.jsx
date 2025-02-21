@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle } from "react-icons/fa";
-import MenstrualCycleImg from "../assets/Menstrual-Cycle.jpg";
+import MenstrualCycleImg from "../assets/Menstrual-Cycle.png";
 import FertilityImg from "../assets/Fertility.jpg";
 import PregnantWomanImg from "../assets/Pregnant-woman.jpg";
 import PartnerImg from "../assets/partner.avif";
