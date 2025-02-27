@@ -37,79 +37,34 @@ const FloAppSection = () => {
   return (
     <section className="bg-gradient-to-r from-pink-100 to-purple-200 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center mb-12">
-        <motion.h2 
-          className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
+        <h2 className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight">
           <span className="text-pink-500">Discover the Power of</span> <span className="text-purple-600">Zenher!</span>
-        </motion.h2>
+        </h2>
       </div>
       <div className="max-w-6xl mx-auto space-y-12">
         {features.map((feature, index) => (
-          <motion.div
+          <div
             key={index}
             className={`flex flex-col md:flex-row items-center gap-8 ${
               index % 2 === 0 ? "md:flex-row-reverse" : ""
             }`}
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             {/* Image Section */}
-            <motion.img
+            <img
               src={feature.imgSrc}
               alt={feature.title}
               className="rounded-lg shadow-lg w-72 md:w-96"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              whileHover={{ rotate: 2 }}
             />
 
             {/* Text Section */}
-            <motion.div
-              className="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 w-full md:w-1/2"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.2 }}
-              viewport={{ once: true }}
-              whileHover={{ boxShadow: "0px 10px 20px rgba(0, 0, 0, 0.2)" }}
-            >
-              <motion.div
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <FaCheckCircle className="text-pink-500 text-2xl mt-1" />
-              </motion.div>
+            <div className="bg-white p-6 rounded-lg shadow-md flex items-start space-x-4 w-full md:w-1/2">
+              <FaCheckCircle className="text-pink-500 text-2xl mt-1" />
               <div>
-                <motion.h3 
-                  className="text-lg font-semibold"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.3 }}
-                  viewport={{ once: true }}
-                >
-                  {feature.title}
-                </motion.h3>
-                <motion.p 
-                  className="text-gray-600"
-                  initial={{ opacity: 0 }}
-                  whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.4 }}
-                  viewport={{ once: true }}
-                >
-                  {feature.description}
-                </motion.p>
+                <h3 className="text-lg font-semibold">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
               </div>
-            </motion.div>
-          </motion.div>
+            </div>
+          </div>
         ))}
       </div>
     </section>
