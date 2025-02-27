@@ -103,7 +103,7 @@ const Navbar = () => {
             }}
             className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800"
           >
-            <RiLogoutBoxRLine className="mr-2" /> Try Zenher
+            <RiLogoutBoxRLine className="mr-2" /> <a href="https://docs.google.com/forms/d/e/1FAIpQLSecByJsq-fsmP6rqFeAD9wO98Z1gPpcEXZGCf5Lf2IO_gxpnQ/viewform">Try Zenher</a>
           </button>
         </motion.div>
       )}

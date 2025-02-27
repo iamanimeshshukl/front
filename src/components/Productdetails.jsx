@@ -14,9 +14,9 @@ const features = [
     imgSrc: MenstrualCycleImg,
   },
   {
-    title: "Understand your fertility better",
+    title: "Consult a Doctor Online",
     description:
-      "Get daily conception tips from our experts and learn how to read your body’s fertility signals with our ovulation tracker.",
+      "Get expert medical advice from certified doctors anytime, anywhere. Book a consultation and receive personalized healthcare guidance.",
     imgSrc: FertilityImg,
   },
   {
