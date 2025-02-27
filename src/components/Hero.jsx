@@ -29,13 +29,10 @@ export default function HeroSection() {
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8 }}
-        className="max-w-2xl text-center lg:text-left"
+        className="max-w-2xl  text-center lg:text-left"
       >
         {/* Logo */}
-        <div className="flex items-center justify-center lg:justify-start gap-3">
-          <img src={zenherLogo} alt="Zenher Logo" className="w-12 h-12" />
-          <p className="text-lg font-semibold text-gray-600">Women's Healthcare, Redefined</p>
-        </div>
+       
 
         <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mt-2 leading-tight">
           Welcome to <span className="text-pink-600">Zenher</span>
