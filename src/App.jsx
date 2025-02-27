@@ -7,7 +7,7 @@ import Products from './Pages/Products';
 import Health from './Pages/Health';
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import Productdetail from './components/Productdetails';
+import Article from './Pages/Article';
 import Tools from "./Pages/Tools"
 const App = () => {
   return (
@@ -21,7 +21,7 @@ const App = () => {
           <Route path="/products" element={<Products />} />
           <Route path="/health" element={<Health />} />
           <Route path="/tools" element={<Tools />} />
-          <Route path="/product/:id" element={<Productdetail />} />
+          <Route path="/article/:id" element={<Article />} />
         </Routes>
         <Footer />
       </Router>
