@@ -38,7 +38,7 @@ const FloAppSection = () => {
     <section className="bg-gradient-to-r from-pink-50 to-purple-200 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight">
-          <span className="text-pink-500">Discover the Power of</span> <span className="text-purple-600">Zenher!</span>
+          <span className="text-pink-600">Discover the Power of</span> <span className="text-purple-600">Zenher!</span>
         </h2>
       </div>
       <div className="max-w-6xl mx-auto space-y-12">

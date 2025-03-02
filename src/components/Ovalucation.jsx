@@ -112,22 +112,25 @@ export default function WomenHealthCalculator() {
 
   return (
     <div className="flex flex-col items-center min-h-screen p-4">
-      <motion.div 
-        initial={{ opacity: 0, y: 20 }} 
-        animate={{ opacity: 1, y: 0 }} 
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: "easeOut" }}
-        className="w-full max-w-md p-6 shadow-lg rounded-2xl bg-white/70 backdrop-blur-md border border-pink-300"
+        className="w-[90vw] mx-6 max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl p-6 shadow-lg rounded-2xl bg-white/70 backdrop-blur-md border border-pink-300"
       >
         <h2 className="text-2xl font-bold text-pink-600 mb-4 text-center">
           {renderCalculatorHeading()}
         </h2>
 
-        <div className="flex justify-center gap-3 mb-6">
+        {/* Responsive Button Layout */}
+        <div className="grid grid-cols-2 lg:flex lg:justify-center gap-3 mb-6">
           {["menstrual", "ovulation", "pregnancy", "period"].map((type) => (
             <button
               key={type}
               className={`py-2 px-4 rounded-lg text-sm font-semibold transition ${
-                calculatorType === type ? "bg-pink-500 text-white shadow-md" : "bg-gray-200 hover:bg-gray-300"
+                calculatorType === type
+                  ? "bg-pink-500 text-white shadow-md"
+                  : "bg-gray-200 hover:bg-gray-300"
               }`}
               onClick={() => {
                 setCalculatorType(type);
@@ -140,7 +143,10 @@ export default function WomenHealthCalculator() {
           ))}
         </div>
 
-        <label className="block text-sm font-medium text-gray-700">Last Period Date</label>
+        {/* Last Period Date Input */}
+        <label className="block text-sm font-medium text-gray-700">
+          Last Period Date
+        </label>
         <input
           type="date"
           value={lastPeriod}
@@ -148,10 +154,12 @@ export default function WomenHealthCalculator() {
           className="w-full p-3 mt-1 border rounded-lg focus:ring-2 focus:ring-pink-400 focus:outline-none"
         />
 
-        {/* Render cycle length only for modes that require it */}
+        {/* Cycle Length Input (Hidden for Period Mode) */}
         {calculatorType !== "period" && (
           <>
-            <label className="block text-sm font-medium text-gray-700 mt-4">Cycle Length (days)</label>
+            <label className="block text-sm font-medium text-gray-700 mt-4">
+              Cycle Length (days)
+            </label>
             <input
               type="number"
               value={cycleLength}
@@ -164,9 +172,12 @@ export default function WomenHealthCalculator() {
         )}
 
         {irregularMessage && (
-          <p className="text-red-600 text-center mt-2 font-semibold">{irregularMessage}</p>
+          <p className="text-red-600 text-center mt-2 font-semibold">
+            {irregularMessage}
+          </p>
         )}
 
+        {/* Submit Button */}
         <button
           className="w-full mt-5 bg-pink-500 hover:bg-pink-600 text-white font-semibold py-3 rounded-lg transition duration-300 flex justify-center items-center"
           onClick={calculateCycle}
@@ -181,6 +192,7 @@ export default function WomenHealthCalculator() {
           )}
         </button>
 
+        {/* Result Display */}
         {!loading && result && (
           <div className="mt-6 p-4 bg-pink-100 rounded-lg text-center border border-pink-300">
             {result.label1 && (
@@ -196,10 +208,12 @@ export default function WomenHealthCalculator() {
           </div>
         )}
 
-        {/* Display period history when in Period Tracker mode */}
+        {/* Period History Section */}
         {calculatorType === "period" && periodHistory.length > 0 && (
           <div className="mt-6 p-4 bg-white rounded-lg border border-gray-300">
-            <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">Period History</h3>
+            <h3 className="text-lg font-semibold text-gray-800 mb-2 text-center">
+              Period History
+            </h3>
             <ul>
               {periodHistory.map((date, index) => (
                 <li key={index} className="text-gray-700 text-center">{date}</li>
