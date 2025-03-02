@@ -4,7 +4,7 @@ import articles from "../data/articles";
 
 const Health = () => {
   return (
-    <div className="bg-gradient-to-r from-pink-100 to-purple-200 min-h-screen p-8 mt-[2cm]">
+    <div className="bg-gradient-to-r from-pink-50 to-purple-200 min-h-screen p-8 mt-[2cm]">
       <h1 className="text-4xl font-bold text-center mb-10 text-gray-800">
         Explore Expert Health Insights
       </h1>

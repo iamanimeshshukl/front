@@ -2,7 +2,7 @@ import React from 'react'
 import Review from '../components/Review'
 const Aboutus = () => {
   return (
-    <div >
+    <div>
       <Review />
     </div>
   )

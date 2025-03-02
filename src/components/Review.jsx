@@ -6,7 +6,7 @@ import zenherLogo from "../assets/smart.png"; // Replace with actual logo path
 
 const AboutZenher = () => {
   return (
-    <section className="min-h-screen  bg-gradient-to-r from-pink-100 to-purple-200 flex flex-col items-center justify-center px-8 py-16">
+    <section className="min-h-screen flex flex-col items-center justify-center px-8 py-16">
       {/* Header Section */}
       <div className="max-w-6xl w-full text-center">
         <motion.img
@@ -19,9 +19,8 @@ const AboutZenher = () => {
         />
         <h1 className="text-5xl font-extrabold text-pink-600 mb-4">All Women’s Healthcare Needs in One App</h1>
         <p className="text-gray-700 text-lg leading-relaxed">
-          Zenher is a revolutionary women's healthcare platform that **empowers, educates, and enhances**
-          the well-being of millions. From **period tracking** to **fertility insights, pregnancy monitoring,
-          and preventive health screenings** – we have it all covered!
+        According to the National Family Health Survey (NFHS-5) conducted between 2019 and 2021, approximately 60% of Indian women aged 15-49 reported facing challenges in accessing healthcare for themselves. These challenges include inadequate infrastructure, insufficient health personnel, lack of available medicines, and absence of female healthcare providers. 
+
         </p>
       </div>
 

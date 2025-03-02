@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import Ovalucation from "../components/Ovalucation";  
+import Ovalucation from "../components/Ovalucation";
 import trackerImg from "../assets/Pregnant-woman.jpg"; // Add an appropriate illustration
 
 const MenstrualTracker = () => {
+  const [cycleLength, setCycleLength] = useState(null);
+
+  const handleCycleLengthChange = (length) => {
+    setCycleLength(length);
+  };
+
   return (
-    <section className="relative min-h-screen bg-gradient-to-r from-pink-100 to-purple-200 py-16 px-6 md:px-12 lg:px-20 flex flex-col items-center justify-center">
+    <section className="relative min-h-screen py-16 px-6 md:px-12 lg:px-20 flex flex-col items-center justify-center">
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${trackerImg})` }}></div>
+      <div className="absolute inset-0 bg-cover bg-center opacity-15" style={{ backgroundImage: `url(${trackerImg})` }}></div>
 
       {/* Heading & Intro */}
       <motion.div 
@@ -22,18 +28,9 @@ const MenstrualTracker = () => {
         <p className="text-pink-600 mt-3 text-lg font-medium">
           Track your cycle and predict ovulation with ease.
         </p>
+    
       </motion.div>
-
-      {/* Illustration */}
-      {/* <motion.img
-        src={trackerImg}
-        alt="Cycle Tracker"
-        className="w-80 md:w-96 mt-6"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7, ease: "easeOut" }}
-      /> */}
-
+<br></br>
       {/* Calculator Component */}
       <motion.div 
         initial={{ opacity: 0, y: 20 }} 
@@ -41,10 +38,13 @@ const MenstrualTracker = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="relative w-full"
       >
-        <Ovalucation />
+        <Ovalucation onCycleLengthChange={handleCycleLengthChange} />
       </motion.div>
+    
     </section>
   );
 };
 
 export default MenstrualTracker;
+
+  

@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 import { FaClipboardList, FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
 import zenherLogo from "/src/assets/smart.png"; // Zenher logo
-import heroImage from "/src/assets/istockphoto-1263557730-612x612-removebg-preview.png"; // Hero image
+import heroImage from "/src/assets/hom.png"; // Hero image
 
 export default function HeroSection() {
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 py-16 bg-gradient-to-r from-pink-100 to-purple-200 min-h-screen overflow-hidden">
+    <section className="relative flex flex-col lg:flex-row items-center justify-between px-6 lg:px-24 py-16 min-h-screen overflow-hidden">
       {/* Decorative SVG Background */}
       <div className="absolute inset-0 -z-10">
         <svg className="absolute top-0 left-0 w-full h-full opacity-30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">

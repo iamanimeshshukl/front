@@ -33,9 +33,9 @@ const Footer = () => {
         {/* Quick Links */}
         <div className="flex flex-wrap justify-center md:justify-start space-x-6">
           <a href="/about" className="hover:text-pink-300 transition">About Us</a>
-          <a href="/services" className="hover:text-pink-300 transition">Services</a>
+          <a href="/products" className="hover:text-pink-300 transition">Services</a>
           <a href="/contact" className="hover:text-pink-300 transition">Contact</a>
-          <a href="/blog" className="hover:text-pink-300 transition">Blog</a>
+          <a href="/article" className="hover:text-pink-300 transition">Blog</a>
         </div>
 
         {/* Contact Information */}
@@ -43,13 +43,13 @@ const Footer = () => {
           <div className="flex items-center space-x-2">
             <FaEnvelope />
             <a href="mailto:info@zenher.com" className="hover:text-pink-300 transition">
-              info@zenher.com
+              zenherco@gmail.com
             </a>
           </div>
           <div className="flex items-center space-x-2">
             <FaPhone />
-            <a href="tel:+1234567890" className="hover:text-pink-300 transition">
-              +1 (234) 567-890
+            <a href="tel:+916392637347" className="hover:text-pink-300 transition">
+             +91 6392637347
             </a>
           </div>
         </div>

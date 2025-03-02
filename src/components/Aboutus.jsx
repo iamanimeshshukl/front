@@ -1,95 +1,87 @@
-import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
+import { Heart, Quote, ChevronLeft, ChevronRight } from "lucide-react";
 
-const features = [
+const reviews = [
   {
-    icon: "💧",
-    title: "Real-Time Health Analysis",
-    description:
-      "Advanced sensors analyze urine samples instantly, offering insights into key health indicators like pH levels, infections, and more.",
+    name: "Emily Johnson",
+    company: "Wellness Care",
+    review: "The AI-driven health insights have empowered me to take charge of my well-being. A game changer for women's healthcare!",
+    rating: 5,
   },
   {
-    icon: "📊",
-    title: "Cloud-Based AI Insights",
-    description:
-      "Health data is securely stored and processed by AI to provide accurate predictions and early disease warnings.",
+    name: "Sophia Martinez",
+    company: "FemHealth",
+    review: "Their AI tools helped me track my pregnancy journey with precision and care. Absolutely love the experience!",
+    rating: 4.8,
   },
   {
-    icon: "⚡",
-    title: "Quick & Accurate Results",
-    description:
-      "State-of-the-art technology delivers instant health analysis results, ensuring a seamless user experience.",
+    name: "Olivia Roberts",
+    company: "Mind & Body AI",
+    review: "The mental wellness chatbot has been a blessing, offering guidance and support anytime I need it.",
+    rating: 5,
   },
   {
-    icon: "🔒",
-    title: "Data Privacy & Security",
-    description:
-      "Encrypted and protected data ensures complete confidentiality and security of user health information.",
+    name: "Ava Thompson",
+    company: "HerMedTech",
+    review: "From menstrual health tracking to personalized care recommendations, this AI-powered platform is phenomenal!",
+    rating: 4.7,
   },
   {
-    icon: "🌍",
-    title: "Eco-Friendly Design",
-    description:
-      "Sustainable materials and efficient water usage contribute to an environmentally friendly solution.",
-  },
-  {
-    icon: "🔗",
-    title: "User-Friendly Interface",
-    description:
-      "A sleek and intuitive interface allows users to easily access and understand their health data anytime, anywhere.",
+    name: "Grace Wilson",
+    company: "AI Women Care",
+    review: "The seamless experience and accurate health predictions have made a huge impact on my daily life.",
+    rating: 5,
   },
 ];
 
-const Aboutus = () => {
+const ReviewCard = ({ name, company, review, rating }) => {
   return (
-    <section className="bg-white py-16 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          className="text-2xl font-bold text-gray-900 mb-6"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-        >
-          Smart Public Toilet Features
-        </motion.h2>
-        <motion.p
-          className="text-lg text-gray-700 mb-12 max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.2 }}
-        >
-          Explore the revolutionary features that make our smart public toilet an innovation in health and sustainability.
-        </motion.p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((feature, index) => (
-            <motion.div
-              key={index}
-              className="bg-white shadow-lg rounded-xl p-8 text-left transform transition-transform hover:scale-105 relative overflow-hidden"
-              whileHover={{
-                scale: 1.05,
-                rotateY: 5,
-                rotateX: 5,
-                transition: { type: "spring", stiffness: 300 },
-              }}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: index * 0.15 }}
-            >
-              <div className="absolute -top-5 -right-5 text-6xl opacity-10">{feature.icon}</div>
-              <div className="text-5xl text-blue-600 mb-4">{feature.icon}</div>
-              <motion.h3
-                className="text-2xl font-semibold text-gray-900 mb-2"
-                whileHover={{ scale: 1.1 }}
-              >
-                {feature.title}
-              </motion.h3>
-              <p className="text-gray-700 leading-relaxed">{feature.description}</p>
-            </motion.div>
-          ))}
-        </div>
+    <motion.div
+      className="bg-pink-500 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-pink-700 max-w-2xl w-full relative overflow-hidden flex flex-col items-center text-center"
+      initial={{ opacity: 0, x: 50 }}
+      animate={{ opacity: 1, x: 0 }}
+      exit={{ opacity: 0, x: -50 }}
+      transition={{ duration: 0.5 }}
+    >
+      <Quote className="absolute top-4 right-4 text-white h-8 w-8" />
+      <div className="flex items-center gap-2 mb-3">
+        {[...Array(5)].map((_, index) => (
+          <Heart key={index} className={`h-5 w-5 ${index < Math.floor(rating) ? "text-white" : "text-gray-600"}`} />
+        ))}
       </div>
-    </section>
+      <p className="text-white mb-4 text-lg italic max-w-lg">"{review}"</p>
+      <h3 className="text-white font-semibold text-xl">{name}</h3>
+      <p className="text-white text-sm">{company}</p>
+    </motion.div>
   );
 };
 
-export default Aboutus;
+export default function ReviewsSection() {
+  const [index, setIndex] = useState(0);
+
+  const nextReview = () => {
+    setIndex((prev) => (prev + 1) % reviews.length);
+  };
+
+  const prevReview = () => {
+    setIndex((prev) => (prev - 1 + reviews.length) % reviews.length);
+  };
+
+  return (
+    <section className="bg-gradient-to-r from-pink-100 to-purple-200 py-16 px-6 flex flex-col items-center">
+      <h2 className="text-4xl font-bold text-purple-800 mb-12">What Women Say About Us</h2>
+      <div className="flex items-center gap-4 w-full max-w-4xl">
+        <button onClick={prevReview} className="text-white p-2 bg-pink-800 rounded-full hover:bg-pink-700">
+          <ChevronLeft className="h-8 w-8" />
+        </button>
+        <div className="flex justify-center w-full overflow-hidden">
+          <ReviewCard key={index} {...reviews[index]} />
+        </div>
+        <button onClick={nextReview} className="text-white p-2 bg-pink-800 rounded-full hover:bg-pink-700">
+          <ChevronRight className="h-8 w-8" />
+        </button>
+      </div>
+    </section>
+  );
+}

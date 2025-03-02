@@ -35,7 +35,7 @@ const features = [
 
 const FloAppSection = () => {
   return (
-    <section className="bg-gradient-to-r from-pink-100 to-purple-200 text-gray-900 py-16 px-6">
+    <section className="bg-gradient-to-r from-pink-50 to-purple-200 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight">
           <span className="text-pink-500">Discover the Power of</span> <span className="text-purple-600">Zenher!</span>

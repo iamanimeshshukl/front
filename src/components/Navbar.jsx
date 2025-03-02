@@ -40,8 +40,9 @@ const Navbar = () => {
       {/* Logo */}
       <div className="flex items-center space-x-2">
         <img src={img} alt="Annanta Logo" className="h-16 w-16 rounded-full" />
+       
       </div>
-
+      
       {/* Navbar Links for Desktop */}
       <div className="hidden lg:flex items-center space-x-8">
         {navLinks.map((link) => (
