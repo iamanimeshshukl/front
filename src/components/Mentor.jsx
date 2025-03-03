@@ -6,10 +6,8 @@ const MentorSection = () => {
   return (
     <div className="w-full py-16 flex flex-col items-center text-white">
       {/* Heading */}
-      <h1 className="font-bold text-4xl text-purple-600 md:text-5xl tracking-tight">Our Mentors</h1>
-      <p className="mt-2 text-lg md:text-xl text-center max-w-2xl text-pink-600">
-        We sincerely appreciate the invaluable guidance and support from our mentors.
-      </p>
+      <h1 className="font-bold text-4xl text-pink-600 md:text-5xl tracking-tight">Our Collaborators</h1>
+    
 
       {/* Mentor Cards */}
       <div className="flex flex-wrap justify-center items-center gap-10 mt-10">

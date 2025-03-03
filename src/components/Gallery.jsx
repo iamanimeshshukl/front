@@ -4,9 +4,10 @@ const Gallery = () => {
   return (
     <div className="">
       <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl text-purple-500 font-bold text-center mb-8">
-          Women's Healthcare Gallery
+        <h1 className="text-6xl text-pink-600 font-bold text-center mb-8">
+        What We Bring to You
         </h1>
+        <br></br>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           {/* Large item */}
           <div className="md:col-span-2 md:row-span-2 relative overflow-hidden rounded-2xl shadow-lg group">

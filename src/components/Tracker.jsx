@@ -26,10 +26,10 @@ const MenstrualTracker = () => {
             transition={{ duration: 0.6, ease: "easeOut" }}
             className="relative max-w-5xl w-full text-center p-4"
           >
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-purple-800 drop-shadow-lg leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-pink-600 drop-shadow-lg leading-tight">
               Menstrual & Ovulation Tracker
             </h2>
-            <p className="text-pink-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
+            <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
               Track your cycle and predict ovulation with ease.
             </p>
           </motion.div>
