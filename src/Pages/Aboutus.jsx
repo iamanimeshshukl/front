@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import logo from "../assets/smart.png";
-
+//import Review from "../components/Review.jsx"
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8 } },
@@ -9,7 +9,7 @@ const fadeIn = {
 
 const About = () => {
   return (
-    <div className="bg-gray-50 text-gray-900">
+    <div className="bg-gradient-to-r from-pink-50 to-purple-200 text-gray-900">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-r from-purple-600 to-pink-500 text-white text-center py-24 px-6">
         <div className="container mx-auto">
@@ -27,7 +27,7 @@ const About = () => {
             animate="visible"
             variants={fadeIn}
           >
-            AI-Powered Women’s Healthcare
+          Empowering Women’s Healthcare
           </motion.h1>
           <motion.p
             className="mt-4 text-lg text-gray-200 max-w-2xl mx-auto"
@@ -35,11 +35,11 @@ const About = () => {
             animate="visible"
             variants={fadeIn}
           >
-            Empowering women through AI-driven insights, expert consultations, and a stigma-free approach to reproductive health.
+            Over 60% of Indian women lack access to adequate healthcare. Zenher aims to bridge this gap through AI-driven diagnostics, telemedicine, and a community-driven support network.
           </motion.p>
         </div>
       </section>
-
+ 
       {/* About Us Section */}
       <section className="py-20 px-6 md:px-12 lg:px-24 text-center">
         <div className="container mx-auto max-w-5xl">

@@ -39,7 +39,7 @@ const Preloader = ({ onLoadingComplete }) => {
   }, [onLoadingComplete]);
 
   return (
-    <div className="fixed inset-0 flex items-center justify-center bg-white z-50">
+    <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-pink-50 to-purple-200 z-50">
       <img
         src="/smart.png"
         alt="Loading Logo"
