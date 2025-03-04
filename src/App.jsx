@@ -2,7 +2,7 @@ import React, { useState, useEffect, lazy, Suspense, memo } from "react";
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import gsap from "gsap";
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import { Analytics } from "@vercel/analytics/react"
@@ -80,6 +80,7 @@ const AnimatedRoutes = ({ showPreloader, setShowPreloader }) => {
       >
         <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
         <Analytics/>
+        <SpeedInsights/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
