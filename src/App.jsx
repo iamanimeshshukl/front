@@ -5,7 +5,7 @@ import gsap from "gsap";
 
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-
+import { Analytics } from "@vercel/analytics/react"
 // 🚀 Preload Main Pages (No Delay)
 import Home from "./Pages/Home";
 import About from "./Pages/Aboutus";
@@ -79,6 +79,7 @@ const AnimatedRoutes = ({ showPreloader, setShowPreloader }) => {
         className="min-h-screen"
       >
         <Suspense fallback={<div className="text-center py-10">Loading...</div>}>
+        <Analytics/>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
