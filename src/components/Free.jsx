@@ -1,58 +1,66 @@
 import React from "react";
 import { motion } from "framer-motion";
-import giftImage from "/src/assets/istockphoto-1174426173-612x612.jpg"; // Replace with relevant image
+import { FaHeartbeat, FaUserShield, FaMagic, FaMobileAlt } from "react-icons/fa";
 
-const GiftSection = () => {
+const features = [
+  {
+    icon: <FaHeartbeat size={40} className="text-pink-600" />,
+    title: "AI-Powered Healthcare",
+    description: "Personalized period tracking, fertility insights, and smart health recommendations tailored for every woman.",
+  },
+  {
+    icon: <FaUserShield size={40} className="text-purple-600" />,
+    title: "100% Privacy & Security",
+    description: "Your data is fully encrypted and protected. We prioritize women's health without compromising privacy.",
+  },
+  {
+    icon: <FaMagic size={40} className="text-blue-600" />,
+    title: "Holistic Wellness Support",
+    description: "From mental well-being to nutrition and fitness, Zenher empowers you with a complete wellness approach.",
+  },
+  {
+    icon: <FaMobileAlt size={40} className="text-green-600" />,
+    title: "Seamless Experience",
+    description: "Enjoy an intuitive, user-friendly app designed for smooth navigation and effortless health tracking.",
+  },
+];
+
+const WhyChooseZenher = () => {
   return (
-    <section className="bg-pink-50 dark:bg-gray-900 py-16 px-6">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-        
-        {/* Left - Image */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 flex justify-center"
+    <section className=" py-20 px-6">
+      <div className="container mx-auto text-center">
+        {/* Heading */}
+        <motion.h2 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.8 }} 
+          className="text-4xl sm:text-5xl font-bold text-pink-600 dark:text-white"
         >
-          <img
-            src={giftImage}
-            alt="Zenher Free Subscription"
-            className="w-full max-w-xs sm:max-w-md lg:max-w-lg drop-shadow-lg"
-          />
-        </motion.div>
+          Why Choose <span className="text-pink-600">Zenher?</span>
+        </motion.h2>
+        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+          The future of women’s healthcare starts here. Zenher offers cutting-edge AI-powered insights, security, and holistic wellness—all in one place.
+        </p>
 
-        {/* Right - Content */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8 }}
-          className="w-full lg:w-1/2 text-center lg:text-left"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
-            🌸 Zenher is <span className="text-pink-600">Gifting Premium Care</span> to Women in Need
-          </h2>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mt-4">
-            We believe **every woman deserves access to advanced healthcare.**  
-            Zenher is offering **free premium subscriptions** to those in need, 
-            ensuring access to **personalized period tracking, fertility insights, and AI-driven health solutions.**
-          </p>
-          <p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
-            If you or someone you know needs support, apply today and take charge of your health with Zenher’s **AI-powered care.**
-          </p>
-
-          {/* CTA Button */}
-          <motion.a
-            href="#"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-6 inline-block px-6 py-3 bg-pink-600 text-white rounded-lg text-lg font-medium shadow-md hover:bg-pink-700 transition-all"
-          >
-            Apply for Free Subscription 💖
-          </motion.a>
-        </motion.div>
+        {/* Features Grid */}
+        <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          {features.map((feature, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all flex flex-col items-center text-center"
+            >
+              <div className="mb-4">{feature.icon}</div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
+              <p className="mt-2 text-gray-700 dark:text-gray-300">{feature.description}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
 };
 
-export default GiftSection;
+export default WhyChooseZenher;

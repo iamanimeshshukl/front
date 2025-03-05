@@ -9,7 +9,7 @@ import Mentor from "../components/Mentor.jsx"
 import Faq from '../components/Faq.jsx'
 import Gallery from '../components/Gallery.jsx'
 import Newsletter from '../components/Newsletter.jsx'
-//import Free from '../components/Free.jsx'
+import Free from '../components/Free.jsx'
 import Article from '../components/Article.jsx'
 //import { Helmet } from 'react-helmet-async';
 const Home = () => {
@@ -22,9 +22,10 @@ const Home = () => {
       <Mentor />
       <Gallery/>
       <br></br>
-    
-      <Newsletter/>
       <Article />
+      <Newsletter/>
+     
+      <Free/>
       <Faq/>
      
      
