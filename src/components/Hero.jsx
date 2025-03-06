@@ -23,11 +23,11 @@ export default function HeroSection() {
         transition={{ duration: 0.8 }}
         className="max-w-2xl w-full"
       >
-        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2 leading-tight">
+        <h1 className="text-4xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mt-2 leading-tight">
           Welcome to <span className="text-pink-600">Zenher</span>
         </h1>
         <p className="text-md sm:text-lg text-gray-700 mt-4">
-          Zenher is conducting a <strong>groundbreaking women's health survey</strong> across 50 colleges, shaping the future of personalized period tracking, fertility insights, and AI-driven healthcare solutions.
+        ZenHer is a modern women's health platform that lets you track periods, ovulation, pregnancy, and more. With AI-powered insights, it helps you stay in control of your health effortlessly.
         </p>
 
         {/* Social Media Icons */}
