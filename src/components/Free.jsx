@@ -38,7 +38,7 @@ const WhyChooseZenher = () => {
         >
           Why Choose <span className="text-pink-600">Zenher?</span>
         </motion.h2>
-        <p className="mt-4 text-lg text-gray-700 dark:text-gray-300">
+        <p className="mt-4 text-lg text-gray-700">
           The future of women’s healthcare starts here. Zenher offers cutting-edge AI-powered insights, security, and holistic wellness—all in one place.
         </p>
 
