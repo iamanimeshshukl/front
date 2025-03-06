@@ -34,7 +34,7 @@ const WhyChooseZenher = () => {
           initial={{ opacity: 0, y: -20 }} 
           animate={{ opacity: 1, y: 0 }} 
           transition={{ duration: 0.8 }} 
-          className="text-4xl sm:text-5xl font-bold text-pink-600 dark:text-white"
+          className="text-4xl sm:text-5xl font-bold text-pink-600"
         >
           Why Choose <span className="text-pink-600">Zenher?</span>
         </motion.h2>
@@ -50,11 +50,11 @@ const WhyChooseZenher = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
-              className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-all flex flex-col items-center text-center"
+              className="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-all flex flex-col items-center text-center"
             >
               <div className="mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white">{feature.title}</h3>
-              <p className="mt-2 text-gray-700 dark:text-gray-300">{feature.description}</p>
+              <h3 className="text-xl font-semibold text-gray-900">{feature.title}</h3>
+              <p className="mt-2 text-gray-700 ">{feature.description}</p>
             </motion.div>
           ))}
         </div>
