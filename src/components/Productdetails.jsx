@@ -38,8 +38,10 @@ const FloAppSection = () => {
     <section className="bg-gradient-to-r from-pink-50 to-purple-200 text-gray-900 py-16 px-6">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <h2 className="text-5xl font-extrabold text-gray-800 tracking-wide leading-tight">
-          <span className="text-pink-600">Discover the Power of</span> <span className="text-purple-600">Zenher!</span>
+          <span className="text-pink-600">One app, your lifelong Companion</span> 
         </h2>
+        <br></br>
+        <span className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">From your first period to your last, we're with you every step of the way</span>
       </div>
       <div className="max-w-6xl mx-auto space-y-12">
         {features.map((feature, index) => (
