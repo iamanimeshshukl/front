@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import logo from "../assets/smart.png";
+import logo from "../assets/zenher-logo.png";
 //import Review from "../components/Review.jsx"
 const fadeIn = {
   hidden: { opacity: 0, y: 30 },

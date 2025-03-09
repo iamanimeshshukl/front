@@ -11,7 +11,8 @@ import { Analytics } from "@vercel/analytics/react";
 import Home from "./Pages/Home";
 import About from "./Pages/Aboutus";
 import Products from "./Pages/Products";
-
+import Term from "./Pages/Term";
+import logo from "./assets/zenher-logo.png"
 // 🛠 Lazy Load Non-Essential Pages
 const Health = lazy(() => import("./Pages/Health"));
 const Article = lazy(() => import("./Pages/Article"));
@@ -42,7 +43,7 @@ const Preloader = ({ onLoadingComplete }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gradient-to-r from-pink-50 to-purple-200 z-50">
       <img
-        src="/smart.png"
+        src={logo}
         alt="Loading Logo"
         className="logo w-40 h-40"
         style={{ filter: "drop-shadow(0px 0px 15px rgba(0, 0, 0, 0.2))" }}
@@ -117,6 +118,7 @@ Menstrual symptoms analyzer, Holistic women's health app, Period tracker for tee
             <Route path="/products" element={<Products />} />
             <Route path="/health" element={<Health />} />
             <Route path="/tools" element={<Tools />} />
+            <Route path="/termandconditions" element={<Term />} />
             <Route path="/article/:id" element={<Article />} />
           </Routes>
         </Suspense>

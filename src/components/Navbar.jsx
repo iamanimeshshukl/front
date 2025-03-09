@@ -10,7 +10,7 @@ import {
   RiLogoutBoxRLine,
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-import img from "/src/assets/smart.png";
+import img from "/src/assets/zenher-logo.png";
 import { FaTools } from "react-icons/fa";
 
 const Navbar = () => {
@@ -96,16 +96,12 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleLogout();
-              setIsOpen(false);
-            }}
-            className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800"
-          >
-            <RiLogoutBoxRLine className="mr-2" /> <a href="https://docs.google.com/forms/d/e/1FAIpQLSecByJsq-fsmP6rqFeAD9wO98Z1gPpcEXZGCf5Lf2IO_gxpnQ/viewform">Try Zenher</a>
-          </button>
+         <button
+      onClick={() => (window.location.href = "/signin")}
+      className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800 transition duration-300"
+    >
+      Try Zenher
+    </button>
         </motion.div>
       )}
     </motion.div>

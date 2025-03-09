@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn, FaEnvelope, FaPhone } from "react-icons/fa6";
-import logo from "/src/assets/smart.png";
+import logo from "/src/assets/zenher-logo.png";
 
 const Footer = () => {
   return (
@@ -34,8 +34,8 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center md:justify-start space-x-6">
           <a href="/about" className="hover:text-pink-300 transition">About Us</a>
           <a href="/products" className="hover:text-pink-300 transition">Services</a>
-          <a href="/contact" className="hover:text-pink-300 transition">Contact</a>
           <a href="/article" className="hover:text-pink-300 transition">Blog</a>
+          <a href="/termandconditions" className="hover:text-pink-300 transition">Terms & Conditions</a>
         </div>
 
         {/* Contact Information */}

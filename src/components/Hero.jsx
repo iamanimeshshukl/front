@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaClipboardList, FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
-import heroImage from "/src/assets/hom.png"; // Hero image
+import heroImage from "/src/assets/home logo.png"; // Hero image
 
 export default function HeroSection() {
   return (
