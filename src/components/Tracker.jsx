@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Ovalucation from "../components/Ovalucation";
 import trackerImg from "../assets/Pregnant-woman.jpg"; // Add an appropriate illustration
-
+import { FaExclamationTriangle } from "react-icons/fa";
 const MenstrualTracker = () => {
   const [cycleLength, setCycleLength] = useState(null);
 
@@ -32,8 +32,14 @@ const MenstrualTracker = () => {
             <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
               Track your cycle and predict ovulation with ease.
             </p>
+       
           </motion.div>
-    
+          <div className="flex items-center justify-center bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mt-4">
+    <FaExclamationTriangle className="text-red-600 text-xl mr-2" />
+    <p className="text-sm sm:text-base font-medium">
+      If your cycle is more than <span className="font-semibold">35 days</span>, please consult a gynecologist.
+    </p>
+  </div>
           {/* Calculator Component */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -42,7 +48,9 @@ const MenstrualTracker = () => {
             className="relative w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl mt-6 px-4 sm:px-0"
           >
             <Ovalucation onCycleLengthChange={handleCycleLengthChange} />
+         
           </motion.div>
+     
         </section>
     
     
