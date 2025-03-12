@@ -17,7 +17,7 @@ import logo from "./assets/zenher-logo.png"
 const Health = lazy(() => import("./Pages/Health"));
 const Article = lazy(() => import("./Pages/Article"));
 const Tools = lazy(() => import("./Pages/Tools"));
-
+import Quiz from './components/Quiz'
 // Memoized Components for Performance
 const MemoizedNavbar = memo(Navbar);
 const MemoizedFooter = memo(Footer);
@@ -108,7 +108,7 @@ Menstrual symptoms analyzer, Holistic women's health app, Period tracker for tee
           <meta name="twitter:image" content="https://zenher.in/twitter-image.jpg" />
           <meta name="twitter:card" content="summary_large_image" />
         </HelmetProvider>
-        
+        <Quiz/>
         <Suspense fallback={<div className="text-center py-10">Zenher..</div>}>
           <Analytics />
           <SpeedInsights />

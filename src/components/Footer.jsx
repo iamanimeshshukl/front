@@ -43,7 +43,7 @@ const Footer = () => {
           <div className="flex items-center space-x-2">
             <FaEnvelope />
             <a href="mailto:info@zenher.com" className="hover:text-pink-300 transition">
-              zenherco@gmail.com
+              zenherhealth@gmail.com
             </a>
           </div>
           <div className="flex items-center space-x-2">
