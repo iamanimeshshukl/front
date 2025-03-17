@@ -10,7 +10,7 @@ import {
   RiLogoutBoxRLine,
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
-import img from "/src/assets/zenher-logo.png";
+//import img from "/src/assets/zenher-logo.png";
 import { FaTools } from "react-icons/fa";
 
 const Navbar = () => {
@@ -39,7 +39,7 @@ const Navbar = () => {
     >
       {/* Logo */}
       <div className="flex items-center space-x-2">
-        <img src={img} alt="Annanta Logo" className="h-16 w-16 rounded-full" />
+        <img src="https://res.cloudinary.com/denlloigs/image/upload/v1742224838/zenher-logo_lgfkwg.png" alt="Annanta Logo" className="h-16 w-16 rounded-full" />
        
       </div>
       

@@ -1,5 +1,5 @@
 import React from 'react'
-//import Hero2 from '../components/Hero2'
+import Video from '../components/Video.jsx'
 import Tracker from "../components/Tracker.jsx"
 //import Aboutus from '../components/Aboutus.jsx'
 //import Newsletter from "../components/Newsletter.jsx"
@@ -22,13 +22,14 @@ const Home = () => {
       <Productdeatils/>
      <div className='w-screen'> <Tracker /></div>
       <Mentor />
+      <Video />
+      <Article />
       <Gallery/>
       <br></br>
-      <Article />
-      
       <Newsletter/>
       <Quiz/>
       <Free/>
+      
       <Faq/>
      
      

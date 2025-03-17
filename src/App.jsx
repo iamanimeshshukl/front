@@ -13,6 +13,7 @@ import About from "./Pages/Aboutus";
 import Products from "./Pages/Products";
 import Term from "./Pages/Term";
 import logo from "./assets/zenher-logo.png"
+
 // 🛠 Lazy Load Non-Essential Pages
 const Health = lazy(() => import("./Pages/Health"));
 const Article = lazy(() => import("./Pages/Article"));
@@ -119,6 +120,7 @@ Menstrual symptoms analyzer, Holistic women's health app, Period tracker for tee
             <Route path="/products" element={<Products />} />
             <Route path="/health" element={<Health />} />
             <Route path="/tools" element={<Tools />} />
+         
             <Route path="/termandconditions" element={<Term />} />
             <Route path="/article/:id" element={<Article />} />
           </Routes>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Ovalucation from '../components/Ovalucation';
-//import Mental from '../components/Mental';
+//import Bmi from '../components/Bmi';
 import trackerImg from "../assets/Pregnant-woman.jpg";
 import { FaExclamationTriangle } from "react-icons/fa";
 const Tools = () => {
@@ -11,7 +11,7 @@ const Tools = () => {
       <div className="absolute inset-0 bg-cover bg-center opacity-10" style={{ backgroundImage: `url(${trackerImg})` }}></div>
       
         <Ovalucation />
-     
+       
       </div>
     
   );
