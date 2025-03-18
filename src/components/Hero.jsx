@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaClipboardList, FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn } from "react-icons/fa6";
+import { FaClipboardList, FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import heroImage from "/src/assets/hero-image.png"; // Hero image
 
 export default function HeroSection() {
@@ -32,8 +32,8 @@ export default function HeroSection() {
 
         {/* Social Media Icons */}
         <div className="flex justify-center lg:justify-start space-x-4 mt-6">
-          <a href="#" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
-            <FaFacebookF size={20} />
+          <a href="https://wa.me/7310212507" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
+            <FaWhatsapp size={20} />
           </a>
           <a href="https://x.com/zenherofficial?t=dvq11Gf3ToZiHiMIrwsRnw&s=09" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
             <FaXTwitter size={20} />

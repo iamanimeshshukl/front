@@ -1,7 +1,7 @@
 export default function JoinCommunity() {
   return (
     <section className="relative mx-auto max-w-[1440px] min-w-[280px] py-8 px-4 sm:px-8 md:px-10 lg:px-20">
-      <div className="relative bg-green-400 w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px] flex flex-col lg:flex-row items-center py-6 sm:py-9 md:py-11 lg:py-14 px-2 sm:px-4 md:px-8 xl:px-16 shadow-xl">
+      <div className="relative bg-emerald-500 w-full rounded-[50px] sm:rounded-[60px] md:rounded-[70px] lg:rounded-[80px] flex flex-col lg:flex-row items-center py-6 sm:py-9 md:py-11 lg:py-14 px-2 sm:px-4 md:px-8 xl:px-16 shadow-xl">
         <img
           className="w-full lg:w-1/2 xl:w-full max-w-[550px] lg:order-2 drop-shadow-lg"
           src="https://iili.io/2ysFUen.png"
