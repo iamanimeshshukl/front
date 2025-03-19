@@ -4,7 +4,7 @@ import logo from "/src/assets/zenher-logo.png";
 
 const Footer = () => {
   return (
-    <footer className="relative bg-gradient-to-r from-purple-900 to-pink-800 text-white py-12 px-6 md:px-16 lg:px-32 overflow-hidden">
+    <footer className="relative bg-purple-800 text-white py-12 px-6 md:px-16 lg:px-32 overflow-hidden">
       {/* Decorative SVG Wave */}
       <div className="absolute top-0 left-0 w-full">
         <svg
