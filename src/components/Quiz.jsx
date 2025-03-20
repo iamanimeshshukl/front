@@ -1,7 +1,11 @@
+
+
+
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaTimes, FaQuestionCircle } from "react-icons/fa";
 import { Heart, RefreshCw } from "lucide-react";
+
 const questions = [
   {
     question: "What is the average menstrual cycle length?",
@@ -64,8 +68,6 @@ const questions = [
     explanation: "Menopause usually occurs between the ages of 45 and 55, marking the end of a woman's reproductive years."
   }
 ];
-
-
 const Quiz = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -104,13 +106,6 @@ const Quiz = () => {
     }
   };
 
-  const getStarRating = () => {
-    if (score >= 4) return "⭐⭐⭐⭐⭐ Excellent!";
-    if (score >= 3) return "⭐⭐⭐⭐ Good!";
-    if (score >= 2) return "⭐⭐⭐ Average!";
-    return "⭐ Keep Learning!";
-  };
-
   return (
     <>
       {/* Floating Button */}
@@ -118,115 +113,88 @@ const Quiz = () => {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         className="fixed bottom-6 right-6 bg-purple-700 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2 text-lg font-semibold hover:shadow-2xl transition-all"
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(true)}
       >
         <FaQuestionCircle className="text-xl" />
         Take Quiz
       </motion.button>
 
-      {/* Sidebar Quiz Panel */}
-      <motion.div
-        initial={{ x: "100%" }}
-        animate={{ x: isOpen ? "0%" : "100%" }}
-        transition={{ type: "spring", stiffness: 120 }}
-        className="fixed top-0 right-0 h-full w-[85%] sm:w-96 bg-white shadow-2xl border-l border-gray-200 p-6 z-50 flex flex-col"
-      >
-        {/* Close Button */}
-        <button className="absolute top-4 right-4 text-gray-600 hover:text-red-600" onClick={() => setIsOpen(false)}>
-          <FaTimes size={20} />
-        </button>
-
-        <h2 className="text-2xl font-bold text-gray-900 text-center font-playfair">Women's Healthcare Quiz</h2>
-
-        {showResults ? (
-       
-
-        <div className="flex flex-col items-center mt-10 p-6 bg-white shadow-lg rounded-xl border border-gray-200 max-w-sm w-full mx-auto">
-          {/* Title */}
-          <h2 className="text-xl font-bold text-purple-700 flex items-center gap-2">
-            <Heart className="w-5 h-5 text-pink-500" /> Quiz Completed!
-          </h2>
-        
-          {/* Message */}
-          <p className="mt-2 text-sm text-gray-600 text-center leading-relaxed">
-            Every step towards knowledge is a step towards better health.  
-            Keep learning and stay empowered! 💖
-          </p>
-        
-          {/* Score Section */}
-          <div className="mt-6 w-full bg-pink-100 p-4 rounded-lg shadow-md flex flex-col items-center">
-            <p className="text-base font-semibold text-gray-800">
-              Your Score: <span className="text-purple-700 font-bold">{score} / {questions.length}</span>
-            </p>
-            <div className="flex mt-2 space-x-1">
-              {Array.from({ length: questions.length }).map((_, i) => (
-                <Heart key={i} className={`w-5 h-5 ${i < score ? "text-pink-500" : "text-gray-300"}`} />
-              ))}
-            </div>
-          </div>
-        
-          {/* Restart Button */}
-          <button
-            className="mt-6 flex items-center gap-2 bg-pink-500 text-white px-5 py-2 rounded-full text-sm font-medium shadow-md transition-all duration-300 transform hover:scale-105 hover:bg-pink-600"
-            onClick={() => {
-              setCurrentQuestion(0);
-              setScore(0);
-              setShowResults(false);
-              setShowExplanation(false);
-            }}
+      {/* Quiz Popup */}
+      {isOpen && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ type: "spring", stiffness: 120 }}
+            className="bg-white p-6 rounded-lg shadow-lg max-w-md w-full relative"
           >
-            <RefreshCw className="w-4 h-4" /> Restart Quiz
-          </button>
-        </div>
-        
-        ) : (
-          <div className="mt-6">
-            <h3 className="text-xl font-semibold text-gray-900 font-playfair">
-              {currentQuestion + 1}. {questions[currentQuestion].question}
-            </h3>
-            <div className="mt-4 space-y-2">
-              {questions[currentQuestion].options.map((option, index) => (
-                <button
-                  key={index}
-                  className={`w-full py-2 px-4 rounded-lg text-lg font-medium transition ${
-                    selectedAnswer
-                      ? option === questions[currentQuestion].answer
-                        ? "bg-green-500 text-white"
-                        : selectedAnswer === option
-                        ? "bg-red-500 text-white"
-                        : "bg-gray-200"
-                      : "bg-gray-200 hover:bg-gray-300"
-                  }`}
-                  onClick={() => handleAnswerClick(option)}
-                  disabled={selectedAnswer !== null}
-                >
-                  {option}
-                </button>
-              ))}
-            </div>
-
-            {showExplanation && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-                className="mt-4 p-3 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 rounded-lg"
-              >
-                <p className="text-sm font-semibold">Correct Answer: <span className="text-green-600">{questions[currentQuestion].answer}</span></p>
-                <p className="text-sm">{questions[currentQuestion].explanation}</p>
-              </motion.div>
-            )}
-
-            <button
-              className="mt-4 w-full bg-purple-700 text-white py-2 rounded-lg hover:bg-purple-600"
-              onClick={handleNextQuestion}
-              disabled={!allowNext}
-            >
-              {currentQuestion === questions.length - 1 ? "Finish" : "Next"}
+            {/* Close Button */}
+            <button className="absolute top-4 right-4 text-gray-600 hover:text-red-600" onClick={() => setIsOpen(false)}>
+              <FaTimes size={20} />
             </button>
-          </div>
-        )}
-      </motion.div>
+            <h2 className="text-2xl font-bold text-gray-900 text-center">Women's Healthcare Quiz</h2>
+            {showResults ? (
+              <div className="text-center mt-6">
+                <h3 className="text-lg font-semibold text-purple-700">Quiz Completed!</h3>
+                <p className="text-gray-600">Your Score: {score} / {questions.length}</p>
+                <button
+                  className="mt-4 bg-purple-700 text-white px-4 py-2 rounded-lg"
+                  onClick={() => {
+                    setCurrentQuestion(0);
+                    setScore(0);
+                    setShowResults(false);
+                    setShowExplanation(false);
+                  }}
+                >
+                  <RefreshCw className="inline-block mr-2" /> Restart Quiz
+                </button>
+              </div>
+            ) : (
+              <div className="mt-6">
+                <h3 className="text-xl font-semibold text-gray-900">{currentQuestion + 1}. {questions[currentQuestion].question}</h3>
+                <div className="mt-4 space-y-2">
+                  {questions[currentQuestion].options.map((option, index) => (
+                    <button
+                      key={index}
+                      className={`w-full py-2 px-4 rounded-lg text-lg font-medium transition ${
+                        selectedAnswer
+                          ? option === questions[currentQuestion].answer
+                            ? "bg-green-500 text-white"
+                            : selectedAnswer === option
+                            ? "bg-red-500 text-white"
+                            : "bg-gray-200"
+                          : "bg-gray-200 hover:bg-gray-300"
+                      }`}
+                      onClick={() => handleAnswerClick(option)}
+                      disabled={selectedAnswer !== null}
+                    >
+                      {option}
+                    </button>
+                  ))}
+                </div>
+                {showExplanation && (
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5 }}
+                    className="mt-4 p-3 bg-yellow-100 border-l-4 border-yellow-500 text-yellow-800 rounded-lg"
+                  >
+                    <p className="text-sm font-semibold">Correct Answer: <span className="text-green-600">{questions[currentQuestion].answer}</span></p>
+                    <p className="text-sm">{questions[currentQuestion].explanation}</p>
+                  </motion.div>
+                )}
+                <button
+                  className="mt-4 w-full bg-purple-700 text-white py-2 rounded-lg hover:bg-purple-600"
+                  onClick={handleNextQuestion}
+                  disabled={!allowNext}
+                >
+                  {currentQuestion === questions.length - 1 ? "Finish" : "Next"}
+                </button>
+              </div>
+            )}
+          </motion.div>
+        </div>
+      )}
     </>
   );
 };

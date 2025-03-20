@@ -2,7 +2,7 @@ import React from 'react'
 //import Video from '../components/Video.jsx'
 import Tracker from "../components/Tracker.jsx"
 //import Aboutus from '../components/Aboutus.jsx'
-//import Newsletter from "../components/Newsletter.jsx"
+import Ai from "../components/Ai.jsx"
 import Productdeatils from '../components/Productdetails.jsx'
 import Hero from '../components/Hero'
 import Mentor from "../components/Mentor.jsx"
@@ -11,7 +11,7 @@ import Gallery from '../components/Gallery.jsx'
 import Newsletter from '../components/Newsletter.jsx'
 import Free from '../components/Free.jsx'
 import Article from '../components/Article.jsx'
-import Quiz from '../components/Quiz'
+//import Quiz from '../components/Quiz'
 
 //import { Helmet } from 'react-helmet-async';
 const Home = () => {
@@ -30,7 +30,8 @@ const Home = () => {
       <Free/>
       <Newsletter/>
       <Faq/>
-      <Quiz/>
+      <Ai />
+      
      
     </div>
   )

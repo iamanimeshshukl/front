@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { FaClipboardList, FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
 import heroImage from "/src/assets/hero-image.png"; // Hero image
-
+//import Quiz from "../components/Quiz"
 export default function HeroSection() {
   return (
     <section className="relative flex flex-col lg:flex-row items-center justify-center text-center lg:text-left px-6 sm:px-10 lg:px-24 py-16 min-h-screen overflow-hidden">
@@ -45,7 +45,6 @@ export default function HeroSection() {
             <FaLinkedinIn size={20} />
           </a>
         </div>
-
         {/* Survey Button */}
         <motion.a
           href="https://docs.google.com/forms/d/e/1FAIpQLSecByJsq-fsmP6rqFeAD9wO98Z1gPpcEXZGCf5Lf2IO_gxpnQ/viewform"
@@ -56,6 +55,7 @@ export default function HeroSection() {
           <FaClipboardList size={20} />
           Join the Survey
         </motion.a>
+     
       </motion.div>
 
       {/* Right Image */}
