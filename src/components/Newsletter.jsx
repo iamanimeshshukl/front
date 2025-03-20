@@ -42,7 +42,7 @@ const Newsletter = () => {
             </div>
             <button
               type="submit"
-              className="bg-pink-600 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-pink-500 transition-all"
+              className="bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-pink-500 transition-all"
             >
               Subscribe Now 
             </button>
