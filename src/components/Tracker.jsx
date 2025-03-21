@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";  // Import useNavigate
 import Ovalucation from "../components/Ovalucation";
 import trackerImg from "../assets/Pregnant-woman.jpg"; 
 import { FaExclamationTriangle } from "react-icons/fa";
-
+import Quiz from "./Quiz";
 const MenstrualTracker = () => {
   const [cycleLength, setCycleLength] = useState(null);
   const navigate = useNavigate(); // Initialize navigate function
@@ -57,7 +57,56 @@ const MenstrualTracker = () => {
       </motion.div>
 
       {/* Know Your Body Section */}
+<<<<<<< HEAD
+      <div className="relative mt-12 flex items-center space-x-3">
+        {/* Flag Pole */}
+        <div className="w-3 h-40 bg-gray-800 rounded-lg shadow-lg"></div>
+
+        {/* Waving Flag */}
+        <motion.div
+          className="relative w-64 h-36 bg-red-600 text-white font-bold text-lg flex items-center justify-center rounded-lg shadow-lg"
+          style={{
+            clipPath:
+              "polygon(0% 0%, 90% 10%, 100% 50%, 90% 90%, 0% 100%)",
+            transformOrigin: "left center",
+          }}
+          animate={{
+            rotate: [0, 2, -2, 0],
+            scaleX: [1, 1.05, 0.95, 1],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 1.5,
+            ease: "easeInOut",
+          }}
+        >
+          <p className="px-3 text-center">Your Health Matters! 💖</p>
+        </motion.div>
+
+        {/* Floating Tooltip */}
+        <motion.div
+          className="absolute -top-10 left-14 bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md"
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1, duration: 0.5, repeat: Infinity, repeatDelay: 3 }}
+        >
+          Click the button for insights!
+        </motion.div>
+
+        {/* Animated Button with Navigation */}
+      
+         <Quiz/>
+
+        {/* Sparkles Effect */}
+        <motion.div
+          className="absolute -top-4 -right-6 w-5 h-5 bg-yellow-400 rounded-full opacity-70"
+          animate={{ scale: [1, 1.5, 1], opacity: [1, 0, 1] }}
+          transition={{ repeat: Infinity, duration: 1.5 }}
+        ></motion.div>
+      </div>
+=======
     
+>>>>>>> 4051b473a2c292b7d335b893f275dd8f1ca0acba
     </section>
   );
 };
