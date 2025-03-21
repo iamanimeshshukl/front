@@ -57,6 +57,7 @@ const MenstrualTracker = () => {
       </motion.div>
 
       {/* Know Your Body Section */}
+<<<<<<< HEAD
       <div className="relative mt-12 flex items-center space-x-3">
         {/* Flag Pole */}
         <div className="w-3 h-40 bg-gray-800 rounded-lg shadow-lg"></div>
@@ -103,6 +104,9 @@ const MenstrualTracker = () => {
           transition={{ repeat: Infinity, duration: 1.5 }}
         ></motion.div>
       </div>
+=======
+    
+>>>>>>> 4051b473a2c292b7d335b893f275dd8f1ca0acba
     </section>
   );
 };

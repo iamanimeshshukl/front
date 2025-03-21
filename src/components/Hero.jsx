@@ -38,7 +38,7 @@ export default function HeroSection() {
           <a href="https://x.com/zenherofficial?t=dvq11Gf3ToZiHiMIrwsRnw&s=09" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
             <FaXTwitter size={20} />
           </a>
-          <a href="https://www.instagram.com/zenher.co?igsh=MmR2OWJkNG9xcDVn" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
+          <a href="https://www.instagram.com/zenher.in?igsh=MmR2OWJkNG9xcDVn" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
             <FaInstagram size={20} />
           </a>
           <a href="https://www.linkedin.com/company/zenher/" className="text-pink-600 hover:text-pink-800 transition transform hover:scale-110">
