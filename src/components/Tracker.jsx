@@ -57,61 +57,7 @@ const MenstrualTracker = () => {
       </motion.div>
 
       {/* Know Your Body Section */}
-      <div className="relative mt-12 flex items-center space-x-3">
-        {/* Flag Pole */}
-        <div className="w-3 h-40 bg-gray-800 rounded-lg shadow-lg"></div>
-
-        {/* Waving Flag */}
-        <motion.div
-          className="relative w-64 h-36 bg-red-600 text-white font-bold text-lg flex items-center justify-center rounded-lg shadow-lg"
-          style={{
-            clipPath:
-              "polygon(0% 0%, 90% 10%, 100% 50%, 90% 90%, 0% 100%)",
-            transformOrigin: "left center",
-          }}
-          animate={{
-            rotate: [0, 2, -2, 0],
-            scaleX: [1, 1.05, 0.95, 1],
-          }}
-          transition={{
-            repeat: Infinity,
-            duration: 1.5,
-            ease: "easeInOut",
-          }}
-        >
-          <p className="px-3 text-center">Your Health Matters! 💖</p>
-        </motion.div>
-
-        {/* Floating Tooltip */}
-        <motion.div
-          className="absolute -top-10 left-14 bg-yellow-400 text-black text-xs font-semibold px-3 py-1 rounded-full shadow-md"
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1, duration: 0.5, repeat: Infinity, repeatDelay: 3 }}
-        >
-          Click the button for insights!
-        </motion.div>
-
-        {/* Animated Button with Navigation */}
-        <motion.button
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px rgba(255, 0, 100, 0.5)" }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => navigate("/body")} // Navigate to the new page
-          className="relative px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg rounded-full shadow-xl transition-transform duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-red-300 ml-[-20px]"
-        >
-          Know Your Body 🚀
-        </motion.button>
-
-        {/* Sparkles Effect */}
-        <motion.div
-          className="absolute -top-4 -right-6 w-5 h-5 bg-yellow-400 rounded-full opacity-70"
-          animate={{ scale: [1, 1.5, 1], opacity: [1, 0, 1] }}
-          transition={{ repeat: Infinity, duration: 1.5 }}
-        ></motion.div>
-      </div>
+    
     </section>
   );
 };
