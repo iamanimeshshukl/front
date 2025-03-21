@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";  // Import useNavigate
 import Ovalucation from "../components/Ovalucation";
 import trackerImg from "../assets/Pregnant-woman.jpg"; 
 import { FaExclamationTriangle } from "react-icons/fa";
-
+import Quiz from "./Quiz";
 const MenstrualTracker = () => {
   const [cycleLength, setCycleLength] = useState(null);
   const navigate = useNavigate(); // Initialize navigate function
@@ -93,17 +93,8 @@ const MenstrualTracker = () => {
         </motion.div>
 
         {/* Animated Button with Navigation */}
-        <motion.button
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ scale: 1.1, boxShadow: "0px 0px 20px rgba(255, 0, 100, 0.5)" }}
-          whileTap={{ scale: 0.9 }}
-          onClick={() => navigate("/body")} // Navigate to the new page
-          className="relative px-6 py-3 bg-gradient-to-r from-pink-500 to-red-500 text-white font-semibold text-lg rounded-full shadow-xl transition-transform duration-300 ease-in-out focus:outline-none focus:ring-4 focus:ring-red-300 ml-[-20px]"
-        >
-          Know Your Body 🚀
-        </motion.button>
+      
+         <Quiz/>
 
         {/* Sparkles Effect */}
         <motion.div

@@ -112,7 +112,7 @@ const Quiz = () => {
       <motion.button
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
-        className="fixed bottom-6 right-6 bg-purple-700 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2 text-lg font-semibold hover:shadow-2xl transition-all"
+        className=" bg-purple-700 text-white px-6 py-3 rounded-full shadow-lg flex items-center gap-2 text-lg font-semibold hover:shadow-2xl transition-all"
         onClick={() => setIsOpen(true)}
       >
         <FaQuestionCircle className="text-xl" />
