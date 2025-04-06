@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { FaClipboardList, FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
-import heroImage from "/src/assets/hero-image.png"; // Hero image
+
 //import Quiz from "../components/Quiz"
 export default function HeroSection() {
   return (
@@ -27,7 +27,7 @@ export default function HeroSection() {
           Welcome to <span className="text-pink-600">Zenher</span>
         </h1>
         <p className="text-md sm:text-lg text-gray-700 mt-4">
-        ZenHer is a modern women's health platform that lets you track periods, ovulation, pregnancy, and more. With AI-powered insights, it helps you stay in control of your health effortlessly.
+        Zenher is a modern women's health platform that lets you track periods, ovulation, pregnancy, and more. With AI-powered insights, it helps you stay in control of your health effortlessly.
         </p>
 
         {/* Social Media Icons */}
@@ -66,7 +66,7 @@ export default function HeroSection() {
         className="mt-10 lg:mt-0 w-full flex justify-center"
       >
         <img
-          src={heroImage}
+          src="https://res.cloudinary.com/denlloigs/image/upload/v1743919074/istockphoto-2197888918-612x612-removebg-preview_tha77b.png"
           alt="Zenher App Preview"
           className="w-full max-w-xs sm:max-w-md lg:max-w-lg drop-shadow-lg"
         />

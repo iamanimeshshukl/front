@@ -100,7 +100,7 @@ const Navbar = () => {
       onClick={() => (window.location.href = "/signin")}
       className="flex items-center bg-red-600 px-4 py-2 rounded-full text-white hover:bg-red-800 transition duration-300"
     >
-      Try Zenher
+      Join Waitlist
     </button>
         </motion.div>
       )}
