@@ -73,7 +73,7 @@ const TermsAndConditions = () => {
           </section>
           <section>
             <h2 className="text-xl font-semibold text-pink-800">Contact Us</h2>
-            <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:zenherhealth@gmail.com" className="text-pink-600 underline">zenherhealth@gmail.com</a>.</p>
+            <p>If you have any questions or concerns about these Terms and Conditions, please contact us at <a href="mailto:zenherhealth@gmail.com" className="text-pink-600 underline">info@zenher.in</a>.</p>
           </section>
         </div>
         <div className="mt-6 text-center">
