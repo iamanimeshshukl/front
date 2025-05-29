@@ -25,9 +25,4 @@
     <priority>0.7</priority>
     <changefreq>monthly</changefreq>
   </url>
-  <url>
-    <loc>https://zenher.in/article</loc>
-    <priority>0.7</priority>
-    <changefreq>daily</changefreq>
-  </url>
 </urlset>

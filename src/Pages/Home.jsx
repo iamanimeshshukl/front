@@ -15,12 +15,13 @@ import Quiz from '../components/Quiz'
 //import { Helmet } from 'react-helmet-async';
 const Home = () => {
   return (
-    <div>
+    <div className='overflow-hidden'>
       
       <Hero className="pt-[2cm]"/>
       <Productdeatils/>
+      <div className='w-screen'> <Tracker /></div>
       <Article />
-     <div className='w-screen'> <Tracker /></div>
+     
       <Mentor />
      
     
