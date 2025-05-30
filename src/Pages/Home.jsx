@@ -18,8 +18,9 @@ const Home = () => {
     <div className='overflow-hidden'>
       
       <Hero className="pt-[2cm]"/>
-      <Productdeatils/>
       <div className='w-screen'> <Tracker /></div>
+      <Productdeatils/>
+      
       <Article />
      
       <Mentor />

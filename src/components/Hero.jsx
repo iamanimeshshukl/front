@@ -47,13 +47,13 @@ export default function HeroSection() {
         </div>
         {/* Survey Button */}
         <motion.a
-          href="https://docs.google.com/forms/d/e/1FAIpQLSecByJsq-fsmP6rqFeAD9wO98Z1gPpcEXZGCf5Lf2IO_gxpnQ/viewform"
+          href="https://nas.io/zenher"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           className="mt-6 inline-flex px-6 py-3 bg-pink-600 text-white rounded-full text-lg font-medium transition-all hover:bg-pink-700 focus:outline-none items-center justify-center gap-2 mx-auto lg:mx-0"
         >
           <FaClipboardList size={20} />
-          Join the Survey
+          Join Our Community
         </motion.a>
      
       </motion.div>
