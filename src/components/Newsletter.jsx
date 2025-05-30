@@ -1,56 +1,54 @@
-import React, { useState } from 'react';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import React from "react";
 
-const Newsletter = () => {
-  const [email, setEmail] = useState("");
-
-  const handleSubscribe = (e) => {
-    e.preventDefault();
-    if (!email.trim()) {
-      toast.warning("Please enter a valid email address.");
-      return;
-    }
-    toast.success("Thank you for subscribing!");
-    setEmail("");
-  };
-
+const JoinCommunity = () => {
   return (
-    <div>
-      <ToastContainer position="top-center" autoClose={3000} />
-      <section 
-        className="relative bg-purple-600 text-white text-center py-16 px-6 bg-cover bg-center"
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
-        <div className="relative container mx-auto max-w-3xl">
-          <h2 className="text-4xl font-extrabold tracking-tight">Stay Ahead with Zenher</h2>
-          <p className="mt-3 text-lg text-gray-200">
-            Join our exclusive newsletter to receive expert insights, AI-driven health innovations, and personalized wellness tips.
-          </p>
-          <form className="mt-6 flex flex-col md:flex-row items-center justify-center gap-4" onSubmit={handleSubscribe}>
-            <div className="relative w-full md:w-2/3">
-              <input
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email address"
-                className="w-full px-5 py-3 rounded-full shadow-lg text-gray-900 focus:outline-none focus:ring-4 focus:ring-pink-400"
-              />
-              <span className="absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-400">
-                📩
-              </span>
-            </div>
-            <button
-              type="submit"
-              className="bg-cyan-500 text-white px-6 py-3 rounded-full font-semibold shadow-lg hover:bg-pink-500 transition-all"
-            >
-              Subscribe Now 
-            </button>
-          </form>
-        </div>
-      </section>
-    </div>
+    <section className="relative h-screen w-full flex items-center justify-center bg-gradient-to-b from-pink-100 to-purple-100 overflow-hidden">
+      {/* Decorative Background Elements */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-0 left-0 w-64 h-64 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob"></div>
+        <div className="absolute bottom-0 right-0 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-50 animate-blob animation-delay-2000"></div>
+      </div>
+
+      {/* Main Content */}
+      <div className="relative z-10 text-center px-6 sm:px-12 max-w-3xl mx-auto space-y-8 animate-fadeIn">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight text-purple-800 drop-shadow-md">
+          Join Our <span className="text-pink-500">Women’s Wellness</span> Community
+        </h2>
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-700 font-light max-w-2xl mx-auto">
+          Empower your health journey. Connect with inspiring women, share your story, and access trusted wellness resources.
+        </p>
+        <a
+          href="https://nas.io/zenher"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block px-10 py-4 bg-gradient-to-r from-pink-400 to-purple-500 text-white font-semibold rounded-full text-lg shadow-lg hover:shadow-2xl hover:scale-105 transition-all duration-300"
+        >
+          Join Now
+        </a>
+      </div>
+
+      {/* Animations */}
+      <style jsx>{`
+        @keyframes fadeIn {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out forwards;
+        }
+        @keyframes blob {
+          0%, 100% { transform: scale(1) translateY(0); }
+          50% { transform: scale(1.2) translateY(-20px); }
+        }
+        .animate-blob {
+          animation: blob 6s ease-in-out infinite;
+        }
+        .animation-delay-2000 {
+          animation-delay: 2s;
+        }
+      `}</style>
+    </section>
   );
 };
 
-export default Newsletter;
+export default JoinCommunity;
