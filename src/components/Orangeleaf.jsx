@@ -42,11 +42,7 @@ const ProductCards = () => {
   return (
     <div className="relative flex flex-col items-center justify-center py-12 px-4 sm:px-6 ">
       {/* Section Heading */}
-      <motion.h2
-        className="text-3xl sm:text-4xl font-bold text-purple-800 mb-8 tracking-tight"
-      >
-        Discover Our <span className="text-pink-500">Wellness Products</span>
-      </motion.h2>
+     
 
       {/* Product Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
