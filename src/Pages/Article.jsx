@@ -51,15 +51,7 @@ const Article = () => {
       </div>
 
       {/* Article Image with Enhanced Styling */}
-      {article.imageUrl && (
-        <div className="mb-12">
-          <img
-            src={article.imageUrl}
-            alt={article.title}
-            className="w-full h-auto rounded-2xl shadow-xl object-cover"
-          />
-        </div>
-      )}
+
 
       {/* Key Points with Modern Cards */}
       <div className="mb-12">
