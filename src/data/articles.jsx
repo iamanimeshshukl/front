@@ -1,33 +1,293 @@
-import img3 from "../assets/istockphoto-1174426173-612x612.jpg";
-import img1 from "../assets/Article02.jpg";
-import img4 from "../assets/Article03.jpg";
-import img2 from "../assets/dr-rishi.png";
-const articles = [
-  
-    {
-      id: "1",
-      title: "Hormonal Imbalance and Fertility: What You Need to Know",
-      doctor: "Dr.RISHI VARDHINI",
-      doctorImage: img2,
-      image: img1,
-      content: "As women, our fertility is intricately linked to our hormonal balance. Our menstrual cycles, egg development, ovulation, libido, pregnancy, and childbirth all depend on perfectly balanced hormones. Unfortunately, many people turn to hormone replacement drugs and therapy in artificial reproduction without fully understanding the impact of synthetic hormones being injected into their bodies. But did you know that your lifestyle can greatly impact your hormones? Weight gain, early puberty, acne, dry skin, period irregularities, excessive bleeding, scanty flow, PCOM/PCOD/PCOS, hair loss, facial hair-growth, recurrent miscarriage, and many other issues can all be signs of hormonal imbalances. Rather than focusing on symptomatic relief with medication, the key to reversing hormonal imbalances lies in genuine lifestyle modifications. It’s time to break the medicine trap and embrace natural healing. At Beyond Birth, we offer a return to nature approach to health and wellness. Our comprehensive approach to care includes lifestyle consultations and personalized treatment plans that focus on natural interventions without the unnecessary use of medicines. With knowledge and awareness, you can modify your lifestyle the right way to improve your internal functions and achieve hormonal balance naturally. Don’t let ignorance dictate your fertility journey. Take control of your health and fertility with natural, sustainable solutions.",
-    },
-    {
-      id: "2",
-      title: "Exploring the Options: A Comprehensive Guide to Fertility Treatments",
-      doctor: "Dr.RISHI VARDHINI",
-      doctorImage: img2,
-      image: img3,
-      content: "When it comes to fertility treatments, there’s a lot of misinformation and societal pressure that can lead people down the wrong path. As a Naturopathic doctor, I believe in treating the root cause of any issue, and that includes infertility. In this post, I want to take a closer look at the various fertility treatments available and share my perspective on what you should consider before pursuing them. First, let’s talk about the various fertility treatments available. There’s a whole range of options, from basic medications to more complex procedures like in vitro fertilization (IVF). These treatments can be helpful for people who are struggling to conceive, but it’s important to understand that they come with risks and limitations. For example, fertility drugs can cause hormonal imbalances, and IVF carries a risk of multiple births and premature delivery. But here’s the thing: many people don’t actually need these treatments. They pursue them out of societal pressure or because they’re feeling stressed about their fertility. But stress is actually a major factor in infertility, so pursuing these treatments can actually make the problem worse. Instead, I believe in taking a natural approach to fertility. This means focusing on making yourself as healthy as possible before you even start trying to conceive. That includes making lifestyle changes, such as improving your diet, exercising regularly, and reducing stress. It also means addressing any underlying health issues, such as hormone imbalances or structural abnormalities, through natural means. By taking this approach, you’ll be giving yourself the best possible chance of conceiving naturally. And if you do end up needing medical interventions, you’ll be in a better position to handle them. So before you start pursuing fertility treatments, take a step back and focus on making yourself as healthy as possible. That way, you’ll be giving yourself the best possible chance of conceiving naturally and having a healthy pregnancy and baby. Remember, naturopathy is more than just treatment – it’s a way of life. So before you start pursuing fertility treatments, take a step back and focus on making yourself as healthy as possible. That way, you’ll be giving yourself the best possible chance of conceiving naturally and having a healthy pregnancy and baby. Remember, naturopathy ismore than just treatment – it’s a way of life.",
-    },
-    {
-      id: "3",
-      title: "The Importance of Letting Labor Begin on Its Own",
-      doctor: "Dr.RISHI VARDHINI",
-      doctorImage: img2,
-      image: img4,
-      content: "There are several ways to deliver a baby, but the most common methods are normal vaginal delivery and caesarean section. However, even normal vaginal deliveries these days cannot be considered entirely natural, as we tend to intervene with non-medical inductions. Emergency c-sections are far more life-saving when compared to elective ones, which are performed for non-medical reasons. To understand this concept better, imagine plucking an unripe fruit from a tree instead of patiently waiting for it to ripen and fall on its own. The same concept applies to childbirth. It’s essential to consider how we deliver our babies and to aim for a more natural approach. Having a planned c-section or non-medical reasons for induction can be compared to waking up with a splash of ice water on your face in the middle of a peaceful, deep, and sound sleep. If it doesn’t feel good to you, it probably doesn’t feel good for the baby either. The takeaway point is to wait for labor to begin on its own. Doing so triples or multiplies your chances of having a natural birth. Always remember that the way you are born will have a great impact on you and your baby for a lifetime. In conclusion, opting for a more natural approach to childbirth can have a positive impact on both mother and baby. Letting labor begin on its own is an essential step towards a natural birth, and it’s crucial to make informed decisions regarding the birth of your child. With the right approach, you can create a positive and memorable birth experience that will stay with you for a lifetime.",
-    },
-  ];
+import menstrualCycleImg from '../assets/Menstrual-Cycle.png';
 
-  export default articles;
+const articles = [
+  {
+    // Article Metadata
+    id: "01",
+    title: "Irregular Periods Becoming Common",
+    description: "Understanding the increase in irregular cycles and its impact on women's health.",
+    imageUrl: menstrualCycleImg,
+    date: "2024-03-20",
+    category: "Women's Health",
+    readTime: "5 min read",
+    lastUpdated: "2024-03-20",
+
+    // Author Information
+    author: {
+      name: "Dr. Sarah Johnson",
+      role: "Women's Health Specialist",
+      credentials: "MD, MPH",
+      expertise: ["Gynecology", "Women's Health", "Hormonal Disorders"]
+    },
+
+    // Content Classification
+    tags: [
+      "Menstrual Health",
+      "Women's Health",
+      "Hormonal Health",
+      "Lifestyle",
+      "Medical Research"
+    ],
+
+    // Article Highlights
+    keyPoints: [
+      "Rising trend of irregular cycles in younger women",
+      "Earlier onset of menstruation",
+      "Multiple contributing factors",
+      "Effective management strategies"
+    ],
+
+    // Main Content Structure
+    content: {
+      // Introduction Section
+      introduction: `
+Understanding the Rise in Irregular Menstrual Cycles
+
+Recent studies have shown a concerning trend: more women, particularly younger women, are experiencing irregular menstrual cycles. Research published in JAMA Network Open reveals that individuals born between 2000 and 2005 are developing menstrual cycles earlier and taking longer to establish regular patterns compared to those born between 1950 and 1969.
+      `,
+
+      // Research Findings Section
+      keyFindings: `
+Key Research Findings
+
+Statistical Overview
+• The median age of first menstruation has decreased from 12.5 years to 11.9 years
+• Younger generations are experiencing more irregular cycles
+• Longer time required to establish regular menstrual patterns
+
+Study Implications
+• Increased need for early intervention
+• Growing importance of menstrual health education
+• Rising demand for specialized healthcare services
+      `,
+
+      // Causes Analysis Section
+      causes: `
+Understanding the Causes
+
+Early Menstruation Factors
+
+Biological Factors
+• Obesity
+• Genetic predisposition
+• Hormonal changes
+
+Environmental Influences
+• Environmental factors
+• Dietary patterns
+• Lifestyle changes
+
+Psychological Factors
+• Psychosocial stress
+• Adverse childhood experiences
+• Mental health impacts
+
+Common Causes of Irregular Periods
+
+Hormonal Imbalances
+• Polycystic Ovary Syndrome (PCOS)
+• Thyroid diseases
+• Other endocrine disorders
+
+Lifestyle Factors
+• Emotional and physical stress
+• Extreme weight changes (gain or loss)
+• Poor nutrition
+• Over-exercise
+• Unhealthy lifestyle habits
+
+Medical Factors
+• Certain medications (birth control, antidepressants, antipsychotics)
+• Perimenopause
+• Underlying health conditions
+      `,
+
+      // Management Strategies Section
+      management: `
+Managing Irregular Periods
+
+Recommended Steps
+
+Track Your Cycle
+• Use a calendar or mobile app
+• Monitor patterns and symptoms
+• Keep detailed records
+• Note any irregularities
+
+Seek Professional Help
+• Consult with healthcare providers
+• Get proper diagnosis
+• Follow recommended treatment plans
+• Regular check-ups
+
+Lifestyle Modifications
+• Maintain a balanced diet
+• Regular exercise
+• Stress management
+• Adequate sleep
+• Healthy habits
+      `,
+
+      // Conclusion Section
+      conclusion: `
+Takeaway and Recommendations
+
+Key Takeaways
+• Early intervention is crucial
+• Regular monitoring is essential
+• Professional guidance is recommended
+• Lifestyle changes can make a significant difference
+
+Long-term Outlook
+With proper management and care, most women can achieve regular menstrual cycles and maintain good reproductive health.
+      `,
+
+      // References Section
+      references: `
+References and Sources
+
+Medical Sources
+• Medicover Hospitals
+• Harvard Chan School of Public Health
+• Journal of Women's Health
+
+Research Publications
+• JAMA Network Open Study (2024)
+• The Guardian Health Reports
+• Women's Health Research Institute
+      `
+    },
+  },
+  {
+    // Article Metadata
+    id: "02",
+    title: "Childhood Trauma Affects Sexual Health",
+    description: "Understanding how early adverse experiences influence sexual well-being and pathways to healing.",
+    imageUrl: menstrualCycleImg, // Using the same image temporarily
+    date: "2024-03-21",
+    category: "Mental Health",
+    readTime: "7 min read",
+    lastUpdated: "2024-03-21",
+
+    // Author Information
+    author: {
+      name: "Dr. Michael Chen",
+      role: "Trauma Specialist",
+      credentials: "PhD, LCSW",
+      expertise: ["Trauma Therapy", "Sexual Health", "Mental Health"]
+    },
+
+    // Content Classification
+    tags: [
+      "Mental Health",
+      "Sexual Health",
+      "Trauma Recovery",
+      "Psychological Well-being",
+      "Therapy"
+    ],
+
+    // Article Highlights
+    keyPoints: [
+      "Impact of childhood trauma on sexual health",
+      "Psychological and physiological effects",
+      "Relational and behavioral challenges",
+      "Pathways to healing and recovery"
+    ],
+
+    // Main Content Structure
+    content: {
+      // Introduction Section
+      introduction: `
+Understanding the Impact of Childhood Trauma on Sexual Health
+
+Childhood trauma, particularly sexual abuse, can have profound and lasting effects on sexual health in adulthood. Research has shown that early adverse experiences can significantly influence various aspects of sexual well-being, from psychological impacts to physiological responses and relational patterns.
+      `,
+
+      // Research Findings Section
+      keyFindings: `
+Key Research Findings
+
+Psychological Impacts
+• Sexual dysfunction with decreased desire and arousal
+• Increased sexual distress
+• Sexual shame as a key mediator
+• Impact on sexual functioning in survivors
+
+Physiological Effects
+• Increased erectile dysfunction in men
+• Higher rates of premature ejaculation
+• Genito-pelvic pain in women
+• Pain with intercourse
+      `,
+
+      // Causes Analysis Section
+      causes: `
+Understanding the Effects
+
+Relational and Behavioral Challenges
+
+Risk Factors
+• Increased likelihood of sexual risk behaviors
+• Higher number of sexual partners
+• Greater involvement in sex trade
+• Elevated risk of STDs
+
+Emotional Impact
+• Reduced social support in adulthood
+• Decreased sexual satisfaction
+• Long-term effects on sexuality
+• Challenges in forming healthy relationships
+      `,
+
+      // Management Strategies Section
+      management: `
+Pathways to Healing
+
+Therapeutic Approaches
+
+Professional Interventions
+• Trauma-Focused Cognitive Behavioral Therapy (CBT)
+• Dialectical Behavior Therapy (DBT)
+• PTSD symptom reduction
+• Improved sexual function
+
+Supportive Measures
+• Addressing sexual shame
+• Body reconnection
+• Therapeutic interventions
+• Professional guidance
+      `,
+
+      // Conclusion Section
+      conclusion: `
+Takeaway and Recommendations
+
+Key Takeaways
+• Professional help is crucial for recovery
+• Trauma-informed therapy is recommended
+• Healing is possible with proper support
+• Early intervention can improve outcomes
+
+Long-term Outlook
+With appropriate therapeutic support and intervention, survivors can work towards restoring their sexual well-being and developing healthy relationships.
+      `,
+
+      // References Section
+      references: `
+References and Sources
+
+Medical Sources
+• PubMed Research Database
+• Dusunen Adam Journal of Psychiatry
+• Journal of Sexual Medicine
+
+Research Publications
+• Trauma and Sexual Health Studies
+• Childhood Trauma Research Institute
+• Sexual Health Research Foundation
+      `
+    }
+  }
+];
+
+export default articles;

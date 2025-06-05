@@ -88,7 +88,7 @@ Menstrual health tracker, Free period tracker app, Pregnancy planning app, PMS s
 Cycle tracking app, Hormonal health app, Women's wellness tracker, Irregular period tracker, Birth control tracker, PCOS period tracker, 
 Endometriosis tracking app, Period reminder app, Contraceptive tracking app, Hormonal balance tracker, Menstrual log app, Cycle syncing app, 
 Pregnancy preparation app, Period flow tracker, Natural fertility tracker, Daily menstrual journal, Period tracker with AI, Best health app for women, 
-Ovulation and pregnancy app, Women’s cycle calendar, Best period reminder, Menstrual pain tracker, Safe days calculator, Female health monitoring app, 
+Ovulation and pregnancy app, Women's cycle calendar, Best period reminder, Menstrual pain tracker, Safe days calculator, Female health monitoring app, 
 Women's reproductive health app, Best PCOS tracking app, Mood tracking for periods, Smart period tracker, AI-based menstrual tracker, 
 Women's health assistant, Intuitive cycle tracker, Personalized menstrual insights, Period tracker with predictions, Fertility awareness tracker, 
 Menstrual symptoms analyzer, Holistic women's health app, Period tracker for teens, Menstrual tracking for wellness.
@@ -120,9 +120,9 @@ Menstrual symptoms analyzer, Holistic women's health app, Period tracker for tee
             <Route path="/products" element={<Products />} />
             <Route path="/health" element={<Health />} />
             <Route path="/tools" element={<Tools />} />
-         
             <Route path="/termandconditions" element={<Term />} />
             <Route path="/article/:id" element={<Article />} />
+            <Route path="/articles/:id" element={<Article />} />
             <Route path="/body" element={<KnowYourBody />} />
           </Routes>
         </Suspense>
