@@ -5,18 +5,19 @@ import articles from "../data/articles";
 
 const Health = () => {
   return (
-   <div className="mt-10">
- <div className="container  px-4 py-8">
-      <div className="flex flex-wrap -mx-4">
-        {articles.map((article) => (
-          <div key={article.id} className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
-            <ArticleCard article={article} />
-          </div>
-        ))}
+    <div className="min-h-screen">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
+          {articles.map((article) => (
+            <div key={article.id} className="w-full flex justify-center">
+              <div className="w-full max-w-sm">
+                <ArticleCard article={article} />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
-
-   </div>
   );
 };
 
