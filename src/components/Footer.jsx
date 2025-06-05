@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center md:justify-start space-x-6">
           <a href="/about" className="hover:text-pink-300 transition">About Us</a>
           <a href="/products" className="hover:text-pink-300 transition">Services</a>
-          <a href="/article" className="hover:text-pink-300 transition">Blog</a>
+          <a href="/health" className="hover:text-pink-300 transition">Blog</a>
           <a href="/termandconditions" className="hover:text-pink-300 transition">Terms & Conditions</a>
         </div>
 
