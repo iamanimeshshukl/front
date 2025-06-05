@@ -4,13 +4,20 @@ import ArticleCard from "../components/ArticleCard";
 import articles from "../data/articles";
 
 const Health = () => {
+  const handleArticleClick = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 place-items-center">
           {articles.map((article) => (
             <div key={article.id} className="w-full flex justify-center">
-              <div className="w-full max-w-sm">
+              <div className="w-full max-w-sm" onClick={handleArticleClick}>
                 <ArticleCard article={article} />
               </div>
             </div>
