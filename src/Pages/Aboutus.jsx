@@ -1,5 +1,5 @@
 import React from "react";
-import Newsletter from "../components/Newsletter";
+
 import OurMission from "../components/OurMission";  
 import OurStory from "../components/OurStory";
 import OurTeam from "../components/OurTeam";
@@ -16,8 +16,7 @@ import OurTeam from "../components/OurTeam";
 const AboutUs = () => {
   return (
     <div className="bg-gradient-to-r from-pink-50 to-purple-200 text-gray-900 min-h-screen">
-      {/* Newsletter Section */}
-      <Newsletter />
+      
 
       {/* Mission Section */}
       <OurMission />

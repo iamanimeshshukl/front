@@ -8,10 +8,10 @@ import Hero from '../components/Hero'
 import Mentor from "../components/Mentor.jsx"
 import Faq from '../components/Faq.jsx'
 import Gallery from '../components/Gallery.jsx'
-import Newsletter from '../components/Newsletter.jsx'
+//import Newsletter from '../components/Newsletter.jsx'
 import Free from '../components/Free.jsx'
 //import Article from '../components/Article.jsx'
-import Quiz from '../components/Quiz'
+
 
 //import ArticleCard from '../components/ArticleCard.jsx'
 //import { Helmet } from 'react-helmet-async';
@@ -25,9 +25,9 @@ const Home = () => {
       <Gallery/>
       <br></br>
       <Free/>
-      <Newsletter/>
+      
       <Faq/>
-      <Quiz />
+     
       
       
      

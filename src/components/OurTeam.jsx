@@ -8,6 +8,7 @@ const teamMembers = [
     description: "Electrical Engineer and visionary driving the future of FemTech with innovative solutions and strategic leadership.",
     img: "https://media.licdn.com/dms/image/v2/D5603AQElyVnYbG_UCQ/profile-displayphoto-crop_800_800/B56ZgCx5nIHYAI-/0/1752393295425?e=1758153600&v=beta&t=vUj_S2iLmHR9NIr8YbEirFQ6HJ7N9df0jr1W2tnQIoU",
     linkedin: "https://www.linkedin.com/in/animesh-shukl/",
+
     expertise: ["Strategic Leadership", "FemTech Innovation", "Business Development"]
   },
   {
@@ -16,6 +17,8 @@ const teamMembers = [
     description: "Chemical Engineer managing operations with precision and purpose, ensuring seamless execution of our mission.",
     img: "https://media.licdn.com/dms/image/v2/D5603AQEN1Pvn0YHe2g/profile-displayphoto-crop_800_800/B56Ze2WYgjHQAI-/0/1751111012023?e=1758153600&v=beta&t=0EsRzKKRK7jQGd_XAkOyhr47uFk9aBNf23GnLbrw9-k",
     linkedin: "https://www.linkedin.com/in/prakharsinghparkar/",
+    twitter: "",
+    website: "",
     expertise: ["Operations Management", "Process Optimization", "Team Leadership"]
   },
   {
@@ -24,6 +27,8 @@ const teamMembers = [
     description: "Food Technologist leading creative outreach and brand awareness with innovative marketing strategies.",
     img: "https://media.licdn.com/dms/image/v2/D5603AQEvGiUys4VRaQ/profile-displayphoto-shrink_800_800/B56ZYoH4UDHQAg-/0/1744429879588?e=1758153600&v=beta&t=9QP8M3XbA03jRtiWYXwUop_r1fx-ZD6UpLu5qub5x40",
     linkedin: "https://www.linkedin.com/in/shruti-mishra-2b0137276/",
+    twitter: "",
+    website: "",
     expertise: ["Brand Strategy", "Digital Marketing", "Creative Direction"]
   },
   {
@@ -32,6 +37,8 @@ const teamMembers = [
     description: "Computer Science Engineer crafting innovative solutions and leading technical excellence across our platform.",
     img: "https://media.licdn.com/dms/image/v2/D4E03AQEIFbxkOpUzoQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667328641704?e=1758153600&v=beta&t=1iFDVmsZjes4lcicIFYPYd0aiAQxNoshRkQjBWV2oWM",
     linkedin: "https://www.linkedin.com/in/kartixharma/",
+    twitter: "",
+    website: "",
     expertise: ["Software Architecture", "Team Leadership", "Innovation"]
   },
   {
@@ -40,6 +47,8 @@ const teamMembers = [
     description: "Statistics expert transforming data into actionable insights that drive our strategic decisions.",
     img: "https://media.licdn.com/dms/image/v2/D5603AQEpQYOp1NEsSA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1732224370539?e=1758153600&v=beta&t=Nc_3VU9mhZkLeXo1VgIKaC8crB9JiXqtfYnyNynj0HQ",
     linkedin: "https://www.linkedin.com/in/anshika-singh-b85622327/",
+    twitter: "",
+    website: "",
     expertise: ["Data Analytics", "Statistical Modeling", "Business Intelligence"]
   },
   {
@@ -48,8 +57,19 @@ const teamMembers = [
     description: "Mobile app developer creating seamless user experiences with cutting-edge mobile technologies.",
     img: "https://media.licdn.com/dms/image/v2/D4D03AQHQCeZDxT508A/profile-displayphoto-scale_200_200/B4DZgC1irgGgAY-/0/1752394250708?e=1758153600&v=beta&t=kqQ5mB6w-4Ubw_rwCmBjM5xo8Q6tHkPf-V1fGVcrL74",
     linkedin: "https://www.linkedin.com/in/prashantrathiii/",
+    twitter: "",
+    website: "",
     expertise: ["Mobile Development", "React Native", "UI/UX Design"]
   },
+];
+
+const cardBgColors = [
+  "bg-gradient-to-br from-green-50 to-green-100",
+  "bg-gradient-to-br from-pink-50 to-pink-100",
+  "bg-gradient-to-br from-blue-50 to-blue-100",
+  "bg-gradient-to-br from-yellow-50 to-yellow-100",
+  "bg-gradient-to-br from-purple-50 to-purple-100",
+  "bg-gradient-to-br from-orange-50 to-orange-100",
 ];
 
 const OurTeam = () => {
@@ -58,13 +78,9 @@ const OurTeam = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-20">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mb-6">
-            <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-          </div>
+       
           <h2 className="text-5xl font-bold text-pink-600 mb-4">
-            Meet Our <span className="text-pink-600">Talented Team</span>
+            Meet Our <span className="text-pink-600">Team </span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-purple-600 mx-auto rounded-full mb-6" />
           <p className="text-gray-600 text-xl max-w-3xl mx-auto leading-relaxed">
@@ -77,7 +93,7 @@ const OurTeam = () => {
           {teamMembers.map((member, idx) => (
             <div
               key={idx}
-              className="group relative bg-white rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100"
+              className={`group relative rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden border border-gray-100 ${cardBgColors[idx % cardBgColors.length]}`}
             >
               {/* Image Container */}
               <div className="relative h-80 overflow-hidden">
@@ -88,18 +104,39 @@ const OurTeam = () => {
                 />
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                
                 {/* Social Links */}
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 delay-100">
                   <div className="flex space-x-3">
-                    <a
-                      href={member.linkedin}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-white/90 backdrop-blur-sm text-gray-800 p-3 rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110"
-                    >
-                      <FaLinkedinIn size={18} />
-                    </a>
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/90 backdrop-blur-sm text-gray-800 p-3 rounded-full hover:bg-pink-500 hover:text-white transition-all duration-300 transform hover:scale-110"
+                      >
+                        <FaLinkedinIn size={18} />
+                      </a>
+                    )}
+                    {member.twitter && member.twitter !== "" && (
+                      <a
+                        href={member.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/90 backdrop-blur-sm text-blue-500 p-3 rounded-full hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110"
+                      >
+                        <FaTwitter size={18} />
+                      </a>
+                    )}
+                    {member.website && member.website !== "" && (
+                      <a
+                        href={member.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/90 backdrop-blur-sm text-green-600 p-3 rounded-full hover:bg-green-500 hover:text-white transition-all duration-300 transform hover:scale-110"
+                      >
+                        <FaGlobe size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
@@ -110,7 +147,6 @@ const OurTeam = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">{member.name}</h3>
                   <p className="text-pink-600 font-semibold text-lg mb-4">{member.title}</p>
                   <p className="text-gray-600 text-sm leading-relaxed mb-6">{member.description}</p>
-                  
                   {/* Expertise Tags */}
                   <div className="flex flex-wrap justify-center gap-2">
                     {member.expertise.map((skill, skillIdx) => (
@@ -132,7 +168,6 @@ const OurTeam = () => {
         </div>
 
         {/* Call to Action */}
-      
       </div>
     </section>
   );

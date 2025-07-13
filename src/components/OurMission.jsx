@@ -38,7 +38,7 @@ const MissionSection = () => {
             viewport={{ once: true }}
             variants={fadeIn}
           >
-            <div className="w-20 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto mb-6 rounded-full"></div>
+            <div className=""></div>
             <h2 className="text-5xl md:text-6xl font-bold text-pink-600 leading-tight">
               Our Mission
             </h2>

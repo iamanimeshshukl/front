@@ -12,7 +12,7 @@ import {
 import { useNavigate } from "react-router-dom";
 //import img from "/src/assets/zenher-logo.png";
 import { FaTools } from "react-icons/fa";
-
+import Quiz from "../components/Quiz";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -150,12 +150,8 @@ const Navbar = () => {
                   
                   
                   
-                  <button
-                    onClick={handleLogout}
-                    className="w-full flex items-center justify-center bg-white/20 backdrop-blur-md border-2 border-white/40 text-white py-4 px-8 rounded-2xl font-semibold text-lg hover:bg-white/30 transition-all duration-300 shadow-xl"
-                  >
-                    <RiLogoutBoxRLine className="mr-3 text-xl" />
-                    Try Zenher
+                  <button>
+                   <Quiz/>
                   </button>
                 </div>
             </div>
