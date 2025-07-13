@@ -82,7 +82,7 @@ const FloAppSection = () => {
   return (
     <section 
       ref={sectionRef}
-      className="bg-gradient-to-r from-pink-50 to-purple-200 text-gray-900 py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden"
+      className="bg-gradient-to-r mt-12 from-pink-50 to-purple-200 text-gray-900  px-4 sm:px-6 lg:px-8 relative overflow-hidden"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -93,7 +93,7 @@ const FloAppSection = () => {
 
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Header Section - No Animation */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-6">
             <span className="text-pink-600">
               One App, Your Lifelong Companion

@@ -1,6 +1,6 @@
 import React from 'react'
 //import Video from '../components/Video.jsx'
-import Tracker from "../components/Tracker.jsx"
+//import Tracker from "../components/Tracker.jsx"
 //import Aboutus from '../components/Aboutus.jsx'
 //import Ai from "../components/Ai.jsx"
 import Productdeatils from '../components/Productdetails.jsx'
@@ -20,14 +20,8 @@ const Home = () => {
     <div className='overflow-hidden'>
       
       <Hero className="pt-[2cm]"/>
-      <div className='w-screen'> <Tracker /></div>
       <Productdeatils/>
- 
-      
-     
       <Mentor />
-     
-    
       <Gallery/>
       <br></br>
       <Free/>
