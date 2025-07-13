@@ -1,76 +1,111 @@
-import React from "react";
-import { motion } from "framer-motion";
-import { gsap } from "gsap";
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Faq = () => {
-  return (
-    <div className="w-full px-6 py-12 shadow-lg sm:rounded-lg">
-      <motion.div 
-        initial={{ opacity: 0, y: -20 }} 
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 0.6 }}
-        className="max-w-3xl mx-auto text-center"
-      >
-        <h2 className="text-4xl font-extrabold text-pink-600">Frequently Asked Questions</h2>
-        <p className="mt-2 text-lg text-gray-700">
-          Common questions about women's healthcare and ZenHer services.
-        </p>
-      </motion.div>
+  const [openIndex, setOpenIndex] = useState(null);
 
-      <div className="max-w-2xl mx-auto mt-8 divide-y divide-pink-300">
-        {faqData.map((faq, index) => (
-          <motion.div 
-            key={index} 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            className="py-5"
-          >
-            <details className="group">
-              <summary className="flex cursor-pointer items-center justify-between font-medium text-lg text-pink-700">
-                <span>{faq.question}</span>
-                <span className="transition group-open:rotate-180">
-                  <svg fill="none" height={24} stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" width={24}>
-                    <path d="M6 9l6 6 6-6" />
-                  </svg>
-                </span>
-              </summary>
-              <motion.p 
-                initial={{ opacity: 0, y: -10 }} 
-                animate={{ opacity: 1, y: 0 }} 
-                transition={{ duration: 0.4 }}
-                className="group-open:animate-fadeIn mt-3 text-gray-600"
+  const toggleFaq = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  return (
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-pink-50 to-purple-50">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-3xl lg:text-4xl font-bold text-pink-600 mb-4">
+            Frequently Asked Questions
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            Find answers to common questions about our women's healthcare services.
+          </p>
+        </motion.div>
+
+        <div className="space-y-4">
+          {faqData.map((faq, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="bg-white rounded-lg shadow-md overflow-hidden"
+            >
+              <button
+                onClick={() => toggleFaq(index)}
+                className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
               >
-                {faq.answer}
-              </motion.p>
-            </details>
-          </motion.div>
-        ))}
+                <h3 className="text-lg font-semibold text-gray-900 pr-4">
+                  {faq.question}
+                </h3>
+                <motion.div
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.2 }}
+                  className="flex-shrink-0"
+                >
+                  <svg 
+                    className="w-5 h-5 text-pink-600" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </motion.div>
+              </button>
+              
+              <AnimatePresence>
+                {openIndex === index && (
+                  <motion.div
+                    initial={{ height: 0, opacity: 0 }}
+                    animate={{ height: "auto", opacity: 1 }}
+                    exit={{ height: 0, opacity: 0 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
+                    className="overflow-hidden"
+                  >
+                    <div className="px-6 pb-4">
+                      <p className="text-gray-600 leading-relaxed">
+                        {faq.answer}
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
 const faqData = [
   {
-    question: "What services does ZenHer offer?",
-    answer: "ZenHer provides AI-driven health tracking, telemedicine consultations, period tracking, fertility insights, and community support for women's well-being.",
+    question: "What healthcare services does ZenHer provide?",
+    answer: "ZenHer offers comprehensive women's healthcare services including AI-powered health monitoring, telemedicine consultations, menstrual cycle tracking, fertility insights, personalized health recommendations, and access to a supportive community of women. Our platform combines cutting-edge technology with compassionate care to support your health journey.",
   },
   {
-    question: "How does AI help in women’s healthcare?",
-    answer: "Our AI analyzes symptoms, predicts potential health risks, and provides personalized health recommendations based on medical insights.",
+    question: "How does artificial intelligence enhance women's healthcare?",
+    answer: "Our AI technology analyzes your health data to provide personalized insights, predict potential health patterns, and offer evidence-based recommendations. The system learns from your unique health profile to deliver increasingly accurate and relevant health guidance while maintaining the highest standards of privacy and security.",
   },
   {
-    question: "Is my health data secure?",
-    answer: "Absolutely! We use advanced encryption and data security protocols to keep your personal health information safe and confidential.",
+    question: "How do you ensure the security and privacy of my health data?",
+    answer: "We implement enterprise-grade security measures including end-to-end encryption, HIPAA compliance protocols, and strict access controls. Your health data is stored securely and never shared without your explicit consent. We regularly undergo security audits and maintain transparency about our data practices.",
   },
   {
-    question: "Can I track my menstrual cycle with ZenHer?",
-    answer: "Yes! Our intuitive menstrual cycle tracker helps you log periods, track symptoms, and receive personalized health insights.",
+    question: "Can I track my menstrual cycle and fertility with ZenHer?",
+    answer: "Yes, our advanced cycle tracking feature allows you to monitor your menstrual cycle, log symptoms, track fertility indicators, and receive personalized insights about your reproductive health. The system provides predictions and recommendations based on your unique patterns and health data.",
   },
   {
-    question: "How do I contact support?",
-    answer: "You can reach our support team via email at support@zenher.com or through the in-app chat feature.",
+    question: "What types of healthcare professionals are available for consultations?",
+    answer: "Our network includes board-certified gynecologists, nurse practitioners, and women's health specialists. All providers are licensed and experienced in women's healthcare, ensuring you receive expert medical guidance through our secure telemedicine platform.",
+  },
+  {
+    question: "How can I get support if I have technical issues or questions?",
+    answer: "Our dedicated support team is available through multiple channels: in-app chat support, email at support@zenher.com, and phone support during business hours. We typically respond within 24 hours and offer comprehensive assistance for both technical and healthcare-related questions.",
   },
 ];
 

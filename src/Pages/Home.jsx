@@ -12,7 +12,7 @@ import Newsletter from '../components/Newsletter.jsx'
 import Free from '../components/Free.jsx'
 //import Article from '../components/Article.jsx'
 import Quiz from '../components/Quiz'
-import Poster from '../components/Poster'
+
 //import ArticleCard from '../components/ArticleCard.jsx'
 //import { Helmet } from 'react-helmet-async';
 const Home = () => {
@@ -22,7 +22,7 @@ const Home = () => {
       <Hero className="pt-[2cm]"/>
       <div className='w-screen'> <Tracker /></div>
       <Productdeatils/>
-      <Poster />
+ 
       
      
       <Mentor />

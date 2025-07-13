@@ -1,97 +1,69 @@
-import { motion } from "framer-motion";
-import { FaClipboardList, FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaLinkedinIn, FaWhatsapp } from "react-icons/fa6";
+import heroImg from "../assets/zenher-logo.png";
+
 
 export default function HeroSection() {
-  const particleVariants = {
-    animate: {
-      y: [0, -20, 0],
-      x: [0, 10, 0],
-      opacity: [0.3, 0.7, 0.3],
-      transition: {
-        duration: 6,
-        repeat: Infinity,
-        ease: "easeInOut",
-        delay: Math.random() * 2,
-      },
-    },
-  };
-
   return (
-    <section className="relative flex flex-col lg:flex-row items-center justify-center text-center lg:text-left px-6 sm:px-12 lg:px-16 py-20 min-h-screen overflow-hidden bg-gradient-to-r from-pink-50 to-purple-200">
-      {/* Floating Background Elements */}
-      <div className="absolute inset-0 -z-10">
-        <motion.div
-          className="absolute top-10 left-20 w-12 h-12 bg-pink-200 rounded-full filter blur-xl opacity-30"
-          variants={particleVariants}
-          animate="animate"
-        />
-        <motion.div
-          className="absolute bottom-20 right-24 w-16 h-16 bg-purple-200 rounded-full filter blur-xl opacity-30"
-          variants={particleVariants}
-          animate="animate"
-        />
-      </div>
-
-      {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="max-w-lg w-full space-y-8"
-        >
-          <h1 className="text-4xl sm:text-5xl lg:text-5xl font-bold text-purple-900 leading-tight tracking-tight">
-            Welcome to <span className="text-pink-600">Zenher</span>
-          </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-600 font-light max-w-md mx-auto lg:mx-0 leading-relaxed">
-            Zenher is your trusted platform for women’s health, offering seamless tracking of periods, ovulation, and pregnancy, with AI-powered insights to guide your journey.
-          </p>
-
-          <div className="flex justify-center lg:justify-start space-x-6 mt-6">
-            {[
-              { href: "https://wa.me/7310212507", Icon: FaWhatsapp },
-              { href: "https://x.com/zenherofficial", Icon: FaXTwitter },
-              { href: "https://www.instagram.com/zenher.in", Icon: FaInstagram },
-              { href: "https://www.linkedin.com/company/zenher/", Icon: FaLinkedinIn },
-            ].map(({ href, Icon }, index) => (
-              <motion.a
-                key={index}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2, y: -4 }}
-                whileTap={{ scale: 0.9 }}
-                className="text-purple-500 hover:text-purple-600 transition-colors"
-              >
-                <Icon size={26} />
-              </motion.a>
-            ))}
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-200 via-pink-100 to-orange-200 overflow-hidden">
+      {/* Decorative Patterns */}
+      {/* Circles */}
+      <div className="absolute top-8 left-8 w-16 h-16 bg-pink-300 rounded-full opacity-60 animate-float-slow" />
+      <div className="absolute bottom-12 right-10 w-10 h-10 bg-blue-300 rounded-full opacity-50 animate-float-fast" />
+      <div className="absolute top-1/2 left-4 w-6 h-6 bg-fuchsia-300 rounded-full opacity-40 animate-pulse" />
+      {/* Squares */}
+      <div className="absolute top-24 right-24 w-8 h-8 bg-yellow-300 rounded-lg opacity-40 animate-float-slow" />
+      <div className="absolute bottom-24 left-1/3 w-12 h-12 bg-green-200 rounded-lg opacity-30 animate-float-fast" />
+      {/* Hexagons (SVG) */}
+      <svg className="absolute top-1/4 right-1/4 w-12 h-12 opacity-40 animate-spin-slow" viewBox="0 0 100 100"><polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="#a5b4fc" /></svg>
+      <svg className="absolute bottom-10 left-1/4 w-8 h-8 opacity-30 animate-spin-reverse" viewBox="0 0 100 100"><polygon points="50,10 90,30 90,70 50,90 10,70 10,30" fill="#f472b6" /></svg>
+      {/* Glassy Card */}
+      <div className="relative z-10 w-full max-w-6xl mx-auto rounded-3xl bg-white/70 backdrop-blur-lg shadow-2xl px-2 sm:px-8 py-6 sm:py-14 flex flex-col min-h-[70vh]">
+        <div className="flex flex-col md:flex-row items-center justify-between flex-1 gap-8">
+          {/* Left Content */}
+          <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left relative z-10 px-2 sm:px-0">
+            {/* SVG Lines - hide on mobile */}
+            <svg className="hidden sm:block absolute -top-10 -left-10 w-[250px] h-[250px] opacity-30 -z-10" viewBox="0 0 350 350" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0,300 Q175,100 350,300" stroke="#f472b6" strokeWidth="2" fill="none" />
+              <path d="M0,320 Q175,120 350,320" stroke="#818cf8" strokeWidth="2" fill="none" />
+            </svg>
+            <span className="text-xs text-gray-400 mb-2 mt-2 sm:mt-0">We are proud of the work we've done.</span>
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl font-extrabold text-gray-900 mb-4 leading-tight mt-8 xs:mt-10 sm:mt-0">
+              Welcome to <br className="hidden xs:inline" /> Zenher Family
+            </h1>
+            <p className="text-gray-600 mb-6 max-w-md text-base sm:text-lg">Zenher is your trusted platform for women’s health, offering seamless tracking of periods, ovulation, and pregnancy, with AI-powered insights to guide your journey.</p>
+            <a href="https://nas.io/zenher" className="inline-block w-full sm:w-auto px-7 py-3 rounded-full bg-pink-500 text-white font-semibold shadow hover:bg-pink-600 transition text-base text-center mb-4 sm:mb-0">Join Our Community</a>
+            {/* Social Icons - show on mobile below button */}
+            <div className="flex items-center justify-center gap-4 mt-4 sm:hidden">
+              <a href="https://wa.me/7310212507" target="_blank" rel="noopener noreferrer" className="hover:text-green-600"><FaWhatsapp size={22} /></a>
+              <a href="https://x.com/zenherofficial" target="_blank" rel="noopener noreferrer" className="hover:text-black"><FaXTwitter size={22} /></a>
+              <a href="https://www.instagram.com/zenher.in" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600"><FaInstagram size={22} /></a>
+              <a href="https://www.linkedin.com/company/zenher/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600"><FaLinkedinIn size={22} /></a>
+            </div>
           </div>
-
-          <motion.a
-            href="https://nas.io/zenher"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="mt-8 inline-flex px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full text-lg font-semibold shadow-md hover:shadow-lg transition-all items-center justify-center gap-3 mx-auto lg:mx-0"
-          >
-            <FaClipboardList size={22} />
-            Join Our Community
-          </motion.a>
-        </motion.div>
-
-        {/* App Preview Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          className="mt-12 lg:mt-0 w-full max-w-sm lg:max-w-md flex justify-center"
-        >
-          <img
-            src="https://res.cloudinary.com/denlloigs/image/upload/v1743919074/istockphoto-2197888918-612x612-removebg-preview_tha77b.png"
-            alt="Zenher App Preview"
-            className="w-full h-auto object-contain drop-shadow-2xl hover:scale-105 transition-transform duration-300"
-          />
-        </motion.div>
+          {/* Right Content - Logo/Image with Shape */}
+          <div className="flex-1 flex items-center justify-center relative min-h-[180px] sm:min-h-[320px] mt-8 md:mt-0">
+            {/* Colored Shape - smaller on mobile */}
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-40 h-40 sm:w-64 sm:h-72 bg-pink-200 rounded-3xl z-0" />
+            {/* Logo/Image */}
+            <img src={heroImg} alt="Zenher Logo" className="relative z-10 w-32 h-32 sm:w-60 sm:h-72 object-contain rounded-2xl shadow-xl border-4 border-white bg-white/80 p-2" />
+            {/* Floating Hexagons - hide on mobile */}
+            <div className="hidden sm:block absolute top-8 right-8 w-6 h-6 bg-pink-400 rounded-lg rotate-12 opacity-80" />
+            <div className="hidden sm:block absolute bottom-8 left-8 w-4 h-4 bg-blue-400 rounded-lg rotate-12 opacity-80" />
+            <div className="hidden sm:block absolute top-1/2 left-1/2 w-3 h-3 bg-fuchsia-400 rounded-lg rotate-12 opacity-80" />
+          </div>
+        </div>
+        {/* Scroll Down Indicator - hide on mobile */}
+        <div className="hidden sm:flex flex-col items-center mt-8">
+          <span className="text-gray-400 text-xs mb-1">Scroll down</span>
+          <div className="w-1 h-6 bg-pink-300 rounded-full animate-bounce" />
+        </div>
+        {/* Social Icons Vertical - desktop only */}
+        <div className="hidden sm:flex flex-col gap-4 items-center absolute right-8 top-1/2 -translate-y-1/2 z-20">
+          <a href="https://wa.me/7310212507" target="_blank" rel="noopener noreferrer" className="hover:text-green-600"><FaWhatsapp size={22} /></a>
+          <a href="https://x.com/zenherofficial" target="_blank" rel="noopener noreferrer" className="hover:text-black"><FaXTwitter size={22} /></a>
+          <a href="https://www.instagram.com/zenher.in" target="_blank" rel="noopener noreferrer" className="hover:text-pink-600"><FaInstagram size={22} /></a>
+          <a href="https://www.linkedin.com/company/zenher/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600"><FaLinkedinIn size={22} /></a>
+        </div>
       </div>
     </section>
   );

@@ -1,63 +1,121 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";  // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import Ovalucation from "../components/Ovalucation";
-import trackerImg from "../assets/Pregnant-woman.jpg"; 
-import { FaExclamationTriangle } from "react-icons/fa";
+import { FaExclamationTriangle, FaCalendarAlt, FaChartLine, FaHeart } from "react-icons/fa";
 
 const MenstrualTracker = () => {
   const [cycleLength, setCycleLength] = useState(null);
-  const navigate = useNavigate(); // Initialize navigate function
+  const navigate = useNavigate();
 
   const handleCycleLengthChange = (length) => {
     setCycleLength(length);
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-20 py-12">
-      {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center opacity-20"
-        style={{ backgroundImage: `url(${trackerImg})` }}
-      ></div>
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 md:px-12 lg:px-20 py-8">
+      {/* Main Content Container */}
+      <div className="relative z-10 w-full max-w-5xl">
+        {/* Header Section */}
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          className="text-center mb-8"
+        >
+          {/* Icon Badge */}
+          <motion.div
+            initial={{ scale: 0 }}
+            animate={{ scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="inline-flex items-center justify-center w-14 h-14 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full shadow-lg mb-4"
+          >
+            <FaCalendarAlt className="text-white text-xl" />
+          </motion.div>
 
-      {/* Heading & Intro */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="relative max-w-5xl w-full text-center p-4"
-      >
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-pink-600 drop-shadow-lg leading-tight">
-          Menstrual & Ovulation Tracker
-        </h2>
-        <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium">
-          Track your cycle and predict ovulation with ease.
-        </p>
-      </motion.div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-pink-600 drop-shadow-lg leading-tight mb-3">
+            Menstrual & Ovulation Tracker
+          </h2>
+          <p className="text-gray-600 mt-3 text-sm sm:text-base md:text-lg font-medium max-w-2xl mx-auto leading-relaxed">
+            Track your cycle and predict ovulation with precision and ease.
+          </p>
+        </motion.div>
 
-      {/* Warning Message */}
-      <div className="flex items-center justify-center bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg mt-4">
-        <FaExclamationTriangle className="text-red-600 text-xl mr-2" />
-        <p className="text-sm sm:text-base font-medium">
-          If your cycle is more than{" "}
-          <span className="font-semibold">35 days</span>, please consult a
-          gynecologist.
-        </p>
+        {/* Feature Cards */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 max-w-4xl mx-auto"
+        >
+          <div className="bg-white rounded-xl p-4 shadow-lg border border-pink-100 hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-500 rounded-lg flex items-center justify-center mr-3">
+                <FaCalendarAlt className="text-white text-sm" />
+              </div>
+              <h3 className="text-base font-semibold text-gray-800">Cycle Tracking</h3>
+            </div>
+            <p className="text-gray-600 text-xs">Accurate period and cycle length tracking</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-4 shadow-lg border border-pink-100 hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-500 rounded-lg flex items-center justify-center mr-3">
+                <FaChartLine className="text-white text-sm" />
+              </div>
+              <h3 className="text-base font-semibold text-gray-800">Ovulation Prediction</h3>
+            </div>
+            <p className="text-gray-600 text-xs">Predict your fertile window with precision</p>
+          </div>
+
+          <div className="bg-white rounded-xl p-4 shadow-lg border border-pink-100 hover:shadow-xl transition-all duration-300">
+            <div className="flex items-center mb-3">
+              <div className="w-10 h-10 bg-gradient-to-br from-pink-400 to-pink-500 rounded-lg flex items-center justify-center mr-3">
+                <FaHeart className="text-white text-sm" />
+              </div>
+              <h3 className="text-base font-semibold text-gray-800">Health Insights</h3>
+            </div>
+            <p className="text-gray-600 text-xs">Understand your body's natural rhythms</p>
+          </div>
+        </motion.div>
+
+        {/* Enhanced Warning Message */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="max-w-2xl mx-auto mb-6"
+        >
+          <div className="bg-gradient-to-r from-red-50 to-pink-50 border border-red-200 rounded-xl p-4 shadow-lg">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                <FaExclamationTriangle className="text-red-500 text-lg mt-0.5" />
+              </div>
+              <div className="ml-3">
+                <h4 className="text-red-800 font-semibold text-base mb-1">Important Notice</h4>
+                <p className="text-red-700 text-xs leading-relaxed">
+                  If your cycle is more than{" "}
+                  <span className="font-bold text-red-800">35 days</span>, please consult a
+                  gynecologist for proper medical evaluation.
+                </p>
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Calculator Component */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+          className="w-full max-w-xl mx-auto"
+        >
+          <div className="">
+          
+            <Ovalucation onCycleLengthChange={handleCycleLengthChange} />
+          </div>
+        </motion.div>
       </div>
-
-      {/* Calculator Component */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative w-full max-w-xs sm:max-w-sm md:max-w-lg lg:max-w-xl xl:max-w-2xl mt-6 px-4 sm:px-0"
-      >
-        <Ovalucation onCycleLengthChange={handleCycleLengthChange} />
-      </motion.div>
-
-      {/* Know Your Body Section */}
-    
     </section>
   );
 };
