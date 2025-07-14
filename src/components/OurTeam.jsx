@@ -6,7 +6,7 @@ const teamMembers = [
     name: "Animesh Shukla",
     title: "CEO & Founder",
     description: "Electrical Engineer and visionary driving the future of FemTech with innovative solutions and strategic leadership.",
-    img: "https://media.licdn.com/dms/image/v2/D5603AQElyVnYbG_UCQ/profile-displayphoto-crop_800_800/B56ZgCx5nIHYAI-/0/1752393295425?e=1758153600&v=beta&t=vUj_S2iLmHR9NIr8YbEirFQ6HJ7N9df0jr1W2tnQIoU",
+    img: "https://res.cloudinary.com/denlloigs/image/upload/v1752496931/animesh_soxiag.jpg",
     linkedin: "https://www.linkedin.com/in/animesh-shukl/",
 
     expertise: ["Strategic Leadership", "FemTech Innovation", "Business Development"]
