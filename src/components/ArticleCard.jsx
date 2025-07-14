@@ -41,7 +41,7 @@ const ArticleCard = ({ article }) => {
         <div className="mt-auto">
           <Link 
             to={`/articles/${article.id}`}
-            className="inline-block w-full text-center bg-gradient-to-r from-pink-500 to-purple-500 text-white px-6 py-3 rounded-full font-medium hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
+            className="inline-block w-full text-center bg-cyan-500 text-white px-6 py-3 rounded-full font-medium hover:from-pink-600 hover:to-purple-600 transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg hover:shadow-xl"
           >
             Read More
           </Link>

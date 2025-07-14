@@ -119,7 +119,7 @@ Menstrual symptoms analyzer, Holistic women's health app, Period tracker for tee
             <Route path="/about" element={<About />} />
             <Route path="/products" element={<Products />} />
             <Route path="/health" element={<Health />} />
-            <Route path="/tools" element={<Tools />} />
+            <Route path="/calculator" element={<Tools />} />
             <Route path="/termandconditions" element={<Term />} />
             <Route path="/article/:id" element={<Article />} />
             <Route path="/articles/:id" element={<Article />} />

@@ -53,7 +53,7 @@ const Footer = () => {
           <div className="flex space-x-4">
             <a href="#" className="hover:text-pink-300 transition"><FaFacebookF size={20} /></a>
             <a href="#" className="hover:text-pink-300 transition"><FaXTwitter size={20} /></a>
-            <a href="https://www.instagram.com/zenher.co?igsh=MmR2OWJkNG9xcDVn" className="hover:text-pink-300 transition"><FaInstagram size={20} /></a>
+            <a href="https://www.instagram.com/zenher.in" className="hover:text-pink-300 transition"><FaInstagram size={20} /></a>
             <a href="https://www.linkedin.com/company/zenher/" className="hover:text-pink-300 transition"><FaLinkedinIn size={20} /></a>
           </div>
         </div>

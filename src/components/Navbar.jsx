@@ -11,8 +11,8 @@ import {
 } from "react-icons/ri";
 import { useNavigate } from "react-router-dom";
 //import img from "/src/assets/zenher-logo.png";
-import { FaTools } from "react-icons/fa";
-import Quiz from "../components/Quiz";
+import { FaCalculator, FaTools } from "react-icons/fa";
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ const Navbar = () => {
     { href: "/", label: "Home", icon: <RiHomeHeartLine className="mr-2" /> },
     { href: "/products", label: "Products", icon: <RiUserHeartLine className="mr-2" /> },
     { href: "/health", label: "Health Library", icon: <RiContactsBookLine className="mr-2" /> },
-    { href: "/tools", label: "Tools", icon: <FaTools className="mr-2" /> },
+    { href: "/calculator", label: "Calculator", icon: <FaCalculator className="mr-2" /> },
     { href: "/about", label: "About Us", icon: <RiInformationLine className="mr-2" /> },
   ];
 
@@ -108,52 +108,37 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 lg:hidden"
+            className="fixed inset-0 z-40 lg:hidden bg-white"
           >
-            {/* Blur Background */}
-            <div
-              className="absolute inset-0 bg-gradient-to-br from-pink-600/90 via-pink-700/90 to-pink-800/90 backdrop-blur-2xl"
-              onClick={() => setIsOpen(false)}
-            />
-
             {/* Menu Content */}
-            <div className="relative h-full flex flex-col justify-center items-center px-6 py-8">
-              
-              
-                
-              
-      <br></br>
- <br></br>
- <br></br>
-                {/* Navigation Links */}
-                <div className="w-full max-w-sm space-y-4 mb-12 mt-12">
-                  {navLinks.map((link, index) => (
-                    <a
-                      key={link.href}
-                      href={link.href}
-                      className="flex items-center p-4 bg-white/15 backdrop-blur-md rounded-2xl border border-white/30 text-white hover:bg-white/25 transition-all duration-300 group shadow-xl"
-                      onClick={() => setIsOpen(false)}
-                    >
-                      <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-white/25 group-hover:bg-white/35 transition-all duration-300 mr-4">
-                        {React.cloneElement(link.icon, { 
-                          className: "text-white text-xl",
-                          size: 24
-                        })}
-                      </div>
-                      <span className="font-semibold text-lg text-white">{link.label}</span>
-                    </a>
-                  ))}
-                </div>
-
-                {/* Action Buttons */}
-                <div className="w-full max-w-sm space-y-4">
-                  
-                  
-                  
-                  <button>
-                   <Quiz/>
-                  </button>
-                </div>
+            <div className="relative h-full flex flex-col justify-center items-center px-4 py-8">
+              {/* Navigation Links */}
+              <div className="w-full max-w-xs space-y-2 mb-8">
+                {navLinks.map((link) => (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    className="block w-full text-center py-3 rounded-lg text-gray-800 hover:bg-pink-100 font-medium text-lg transition-all duration-200"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                ))}
+              </div>
+              {/* Action Button */}
+              <button
+                onClick={() => {
+                  setIsOpen(false);
+                  handleLogout();
+                }}
+                className="w-full max-w-xs py-3 rounded-lg bg-pink-500 text-white font-semibold text-lg hover:bg-pink-600 transition-all duration-200 mb-4"
+              >
+                Try Zenher
+              </button>
+              {/* Quiz Button as simple text link at the bottom */}
+              <div className="w-full max-w-xs text-center mt-4">
+               
+              </div>
             </div>
           </motion.div>
         )}
