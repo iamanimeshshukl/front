@@ -13,10 +13,10 @@ const articles = [
     title: "Irregular Periods Becoming Common",
     description: "Understanding the increase in irregular cycles and its impact on women's health.",
     imageUrl: menstrualCycleImg,
-    date: "2024-03-20",
+    date: "2025-05-20",
     category: "Women's Health",
     readTime: "5 min read",
-    lastUpdated: "2024-03-20",
+    lastUpdated: "2025-05-20",
 
     // Author Information
     author: {
@@ -170,10 +170,10 @@ Research Publications
     title: "Childhood Trauma Affects Sexual Health",
     description: "Understanding how early adverse experiences influence sexual well-being and pathways to healing.",
     imageUrl: article02Img,
-    date: "2024-03-21",
+    date: "2025-05-21",
     category: "Mental Health",
     readTime: "7 min read",
-    lastUpdated: "2024-03-21",
+    lastUpdated: "2025-05-21",
 
     // Author Information
     author: {
@@ -300,10 +300,10 @@ Research Publications
     title: "PCOD: A Disease or a Disorder of Lifestyle?",
     description: "Understanding the complex relationship between PCOD/PCOS and lifestyle factors in women's health.",
     imageUrl: article03Img,
-    date: "2024-03-22",
+    date: "2025-05-22",
     category: "Women's Health",
     readTime: "6 min read",
-    lastUpdated: "2024-03-22",
+    lastUpdated: "2025-05-22",
 
     // Author Information
     author: {
@@ -431,10 +431,10 @@ Research Publications
     title: "How To Know Ovulation Period",
     description: "A comprehensive guide to understanding and tracking your ovulation time using various reliable methods.",
     imageUrl: ovulationImg,
-    date: "2024-03-23",
+    date: "2025-05-23",
     category: "Women's Health",
     readTime: "8 min read",
-    lastUpdated: "2024-03-23",
+    lastUpdated: "2025-05-23",
 
     // Author Information
     author: {
@@ -559,10 +559,10 @@ Research Publications
     title: "Why Women Gets Sexually Numb",
     description: "Understanding the various causes of vaginal numbness and diminished sexual sensation in women, from physical to psychological factors.",
     imageUrl: sexualHealthImg,
-    date: "2024-03-24",
+    date: "2025-05-24",
     category: "Women's Health",
     readTime: "7 min read",
-    lastUpdated: "2024-03-24",
+    lastUpdated: "2025-05-24",
 
     // Author Information
     author: {
@@ -686,10 +686,10 @@ Research Publications
     title: "Managing PCOD: A Comprehensive Guide to Diet and Lifestyle",
     description: "A detailed guide to managing Polycystic Ovarian Disease through proper nutrition, lifestyle changes, and weight management strategies.",
     imageUrl: fertilityImg,
-    date: "2024-03-25",
+    date: "2025-05-25",
     category: "Women's Health",
     readTime: "10 min read",
-    lastUpdated: "2024-03-25",
+    lastUpdated: "2025-05-25",
 
     // Author Information
     author: {
@@ -823,10 +823,10 @@ Research Publications
     title: "Understanding the Global Rise in Infertility",
     description: "Exploring the increasing rates of infertility worldwide and the key factors contributing to this growing public health concern.",
     imageUrl: menstrualCycleImg,
-    date: "2024-03-26",
+    date: "2025-05-26",
     category: "Reproductive Health",
     readTime: "7 min read",
-    lastUpdated: "2024-03-26",
+    lastUpdated: "2025-05-26",
 
     // Author Information
     author: {

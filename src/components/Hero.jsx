@@ -40,7 +40,7 @@ const Hero = () => {
         <div className="space-y-3 sm:space-y-4 text-center lg:text-left">
           <h1 className="text-3xl mt-10 sm:text-4xl md:text-5xl lg:text-7xl font-light leading-tight text-slate-800 tracking-tight">
             Welcome to{" "}
-            <span className="font-bold text-cyan-500">
+            <span className="font-bold text-cyan-600">
               Zenher
             </span>
           </h1>
